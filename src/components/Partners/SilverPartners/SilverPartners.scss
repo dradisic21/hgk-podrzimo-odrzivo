@@ -59,6 +59,8 @@
           }
         }
         .text-content {
+          display: flex;
+          flex-direction: column;
 
           .partner-name {
             font-size: 28px;

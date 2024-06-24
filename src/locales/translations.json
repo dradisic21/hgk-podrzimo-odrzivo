@@ -1,18 +1,22 @@
 {
   "en": {
-    "About the conference": "About the conference",
-    "Program": "Program",
-    "Speakers": "Speakers",
-    "Partners": "Partners",
-    "Contact": "Contact",
-    "Sign in": "Sign in"
+  "translation": {
+  "About the conference": "About the conference",
+  "Program": "Program",
+  "Speakers": "Speakers",
+  "Partners": "Partners",
+  "Contact": "Contact",
+  "Sign in": "Sign in"
+  }
   },
   "hr": {
-    "O konferenciji": "O konferenciji",
-    "Program": "Program",
-    "Speakers": "Speakers",
-    "Partneri": "Partneri",
-    "Kontakt": "Kontakt",
-    "Prijavi se": "Prijavi se"
+  "translation": {
+  "About the conference": "O konferenciji",
+  "Program": "Program",
+  "Speakers": "Govornici",
+  "Partners": "Partneri",
+  "Contact": "Kontakt",
+  "Sign in": "Prijavi se"
   }
-}
+  }
+ }

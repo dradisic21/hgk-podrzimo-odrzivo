@@ -10,7 +10,7 @@ import "./ConferencePage.scss";
 
 
 
-export function ConferencePage() {
+export default function ConferencePage() {
   const navigate = useNavigate();
 
   const handleGetTicketClick = () => {

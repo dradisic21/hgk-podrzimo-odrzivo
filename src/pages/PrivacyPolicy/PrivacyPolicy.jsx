@@ -4,7 +4,7 @@ import "./PrivacyPolicy.scss";
 import { PrivacyPolicyText } from "../../section/PrivacyPolicyText/PrivacyPolicyText";
 
 
-export function PrivacyPolicy() {
+export default function PrivacyPolicy() {
 
 
     return (

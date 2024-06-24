@@ -41,7 +41,7 @@ export function PopUp({ selectedSpeakerId, speakers, onClose }) {
             />
           
           <h2 className="speaker-name">{selectedSpeaker.title}</h2>
-          <p className="speaker-body">{selectedSpeaker.body}</p>
+          <div className="speaker-body" dangerouslySetInnerHTML={{ __html: selectedSpeaker.body }} />
           <div className="popup-action">
             <Button type="button" name="Zatvori" className="popup-close" onClick={onClose}/>
             <div className="popup-contant">

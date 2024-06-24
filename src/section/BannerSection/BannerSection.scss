@@ -1,21 +1,26 @@
 .banner-container {
   width: 100%;
   max-width: 1920px;
-  height: 380px;
-  background-image: url("../../../public/assets/desktop-banner.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
   z-index: 1;
+
+  img {
+    width: 100%;
+    max-width: 1920px;
+    z-index: 1;
+  }
 }
 
 @media screen and (max-width: 500px) {
-    .banner-container {
-        height: 312px;
-        background-image: url("../../../public/assets/mobile-banner.svg");
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
-      
+  .banner-container {
+    width: 100%;
+    height: 312px;
+    background-image: url("../../../public/assets/mobile-banner.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    img {
+      display: none;
     }
+  }
 }

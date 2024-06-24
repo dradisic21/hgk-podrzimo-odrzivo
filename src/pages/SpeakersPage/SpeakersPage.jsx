@@ -7,7 +7,7 @@ import { Footer } from "../../layout/Footer/Footer";
 import "./SpeakersPage.scss";
 import { SpeakersSection } from "../../section/SpeakersSection/SpeakersSection";
 
-export function SpeakersPage() {
+export default function SpeakersPage() {
   const navigate = useNavigate();
 
   const handleGetTicketClick = () => {

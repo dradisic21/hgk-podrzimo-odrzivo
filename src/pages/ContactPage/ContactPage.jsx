@@ -8,7 +8,7 @@ import { Footer } from "../../layout/Footer/Footer";
 import "./ContactPage.scss";
 
 
-export function ContactPage() {
+export default function ContactPage() {
   const navigate = useNavigate();
 
   const handleGetTicketClick = () => {

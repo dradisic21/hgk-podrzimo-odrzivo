@@ -6,7 +6,7 @@ import { Footer } from "../../layout/Footer/Footer";
 import "./ConferenceRegistrationPage.scss";
 import { ConferenceTextSection } from "../../section/ConferenceTextSection/ConferenceTextSection";
 
-export function ConferenceRegistrationPage() {
+export default function ConferenceRegistrationPage() {
   return (
     <div className="conference-reg-container">
       <div className="header">

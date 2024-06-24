@@ -138,3 +138,27 @@ export async function getPrograms() {
     throw new Error(`Greška prilikom dohvaćanja podataka: ${error.message}`);
   }
 }
+
+//Newsletter 
+
+
+
+export async function sentNewsletter(email) {
+  const API_URL =
+    "https://email.hgk.hr/x/plugin/?pName=subscribe&MIDRID=S7Y1BAAA38&pLang=hr&Z=2065102450";
+
+  const data = {
+    DMDtask: "subscribe",
+    subscribe_source: "web_prijava",
+    email: email,
+  };
+
+  try {
+    const response = await axios.post(API_URL, data);
+
+    console.log("Uspješno prijavljivanje na newsletter:", response);
+    return response;
+  } catch (error) {
+    throw new Error(`Greška pri prijavi na newsletter: ${error.message}`);
+  }
+}

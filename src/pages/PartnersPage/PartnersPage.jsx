@@ -1,14 +1,14 @@
 import { useNavigate } from "react-router-dom";
 import { Button } from "../../components/Button/Button";
 import { BannerSection } from "../../section/BannerSection/BannerSection";
-import { PartnerSection } from "../../section/PartnersSection/PartnerSection";
+import { PartnersForPage } from "../../section/PartnersForPage/PartnersForPage";
 import { BecomePartner } from "../../section/BecomePartner/BecomePartner";
 import { Newsletter } from "../../section/Newsletter/Newsletter";
 import { Footer } from "../../layout/Footer/Footer";
 import "./PartnersPage.scss";
 
 
-export function PartnersPage() {
+export default function PartnersPage() {
   const navigate = useNavigate();
 
   const handleGetTicketClick = () => {
@@ -26,7 +26,7 @@ export function PartnersPage() {
             </div>
           </div>
         </div>
-        <PartnerSection />
+        <PartnersForPage />
         <BannerSection />
         <BecomePartner />
         <Newsletter />

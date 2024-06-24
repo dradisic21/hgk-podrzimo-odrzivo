@@ -10,13 +10,14 @@ import { Newsletter } from "../../section/Newsletter/Newsletter";
 import { Footer } from "../../layout/Footer/Footer";
 import { PartnerSection } from "../../section/PartnersSection/PartnerSection";
 import "./HomePage.scss"
+import {Video} from "../../components/Video/Video";
 
 
 
-export function HomePage() {
+export default function HomePage() {
     return(
         <div className="home-page-container">
-            {/* <Video /> */}
+             {/* <Video /> */}
             <ImageSlider />
             <SupportSustainable />
             <ProgramDetails />

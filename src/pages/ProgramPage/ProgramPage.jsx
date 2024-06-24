@@ -8,7 +8,7 @@ import { Footer } from "../../layout/Footer/Footer";
 
 import "./ProgramPage.scss";
 
-export function ProgramPage() {
+export default function ProgramPage() {
   const navigate = useNavigate();
 
   const handleGetTicketClick = () => {

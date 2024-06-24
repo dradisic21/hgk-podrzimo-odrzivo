@@ -8,6 +8,8 @@ import { menuSlide } from "../../ui/Anime/anime";
 import "./Sidebar.scss";
 
 export function Sidebar({ closeSidebar }) {
+
+  
   return (
     <motion.div
       variants={menuSlide}

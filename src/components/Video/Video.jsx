@@ -12,7 +12,7 @@ export function Video() {
   return (
     <div className="video-container">
       <video className="video" autoPlay loop muted>
-        <source src="/assets/video/hgk_podrzimo odrzivo.mp4" type="video/mp4" />
+        <source src="/assets/video/hgk_podrzimo_odrzivo.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       <div className="slide-content">

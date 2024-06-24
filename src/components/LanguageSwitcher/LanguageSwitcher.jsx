@@ -1,16 +1,20 @@
 import React, { useState } from "react";
 import { Button } from "../Button/Button";
 import "./LanguageSwitcher.scss";
-import i18n from "../../services/i18n"; 
+import { useTranslation } from "react-i18next";
 
 export function LanguageSwitcher() {
   const [isOpen, setIsOpen] = useState(false);
+  const { i18n } = useTranslation();
 
   const toggleDropdown = () => setIsOpen(!isOpen);
 
   const switchLanguage = (language) => {
-    i18n.changeLanguage(language);
-    setIsOpen(false); 
+    i18n
+      .changeLanguage(language)
+      // .then(() => console.log(`Switching language to: ${i18n.language}`))
+      // .catch((err) => console.error("Language switch failed:", err));
+    setIsOpen(false);
   };
 
   return (
@@ -19,7 +23,10 @@ export function LanguageSwitcher() {
         <span className={`current-language ${isOpen ? "active" : ""}`}>
           {i18n.language.toUpperCase()}
         </span>
-        <img src={`/assets/icons/${isOpen ? "arrow-up.svg" : "arrow-down.svg"}`} alt="arrow" />
+        <img
+          src={`/assets/icons/${isOpen ? "arrow-up.svg" : "arrow-down.svg"}`}
+          alt="arrow"
+        />
       </div>
       {isOpen && (
         <div className="dropdown-content">
@@ -42,3 +49,5 @@ export function LanguageSwitcher() {
     </div>
   );
 }
+
+

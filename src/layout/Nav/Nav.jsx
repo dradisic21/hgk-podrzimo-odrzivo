@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import Hamburger from "hamburger-react";
@@ -10,6 +10,17 @@ import "./Nav.scss";
 export function Nav() {
   const [isOpen, setOpen] = useState(false);
   const { t } = useTranslation();
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [isOpen]);
 
   const handleSignIn = () => {
     window.open("https://digitalnakomora.hr/home", "_blank");
@@ -35,7 +46,7 @@ export function Nav() {
                 isActive ? "active-link active" : "active-link"
               }
             >
-              {t("O konferenciji")}
+              {t("About the conference")}
             </NavLink>
             <NavLink
               to="/program"
@@ -51,7 +62,7 @@ export function Nav() {
                 isActive ? "active-link active" : "active-link"
               }
             >
-              {t("Govornici")}
+              {t("Speakers")}
             </NavLink>
             <NavLink
               to="/partneri"
@@ -59,7 +70,7 @@ export function Nav() {
                 isActive ? "active-link active" : "active-link"
               }
             >
-              {t("Partneri")}
+              {t("Partners")}
             </NavLink>
             <NavLink
               to="/kontakt"
@@ -67,7 +78,7 @@ export function Nav() {
                 isActive ? "active-link active" : "active-link"
               }
             >
-              {t("Kontakt")}
+              {t("Contact")}
             </NavLink>
           </ul>
 
@@ -78,7 +89,7 @@ export function Nav() {
           <div className="login-button">
             <Button
               className="login-btn"
-              name="Prijavi se"
+              name="Sign in"
               onClick={handleSignIn}
             />
           </div>

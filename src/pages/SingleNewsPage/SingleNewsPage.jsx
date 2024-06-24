@@ -7,7 +7,7 @@ import { Footer } from "../../layout/Footer/Footer";
 import { getSingleNews } from "../../services/Api";
 import "./SingleNewsPage.scss";
 
-export function SingleNewsPage() {
+export default function SingleNewsPage() {
   const navigate = useNavigate();
   const { slug } = useParams();
   const [news, setNews] = useState([[]]);

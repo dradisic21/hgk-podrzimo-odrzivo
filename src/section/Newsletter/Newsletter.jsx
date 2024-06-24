@@ -1,9 +1,27 @@
+import React, { useState } from "react";
 import { Input } from "../../components/Input/Input";
 import { Button } from "../../components/Button/Button";
-import "./Newsletter.scss";
 import { SocialMedia } from "../../components/SocialMedia/SocilaMedia";
+import { sentNewsletter } from "../../services/Api";
+import "./Newsletter.scss";
+
 
 export function Newsletter() {
+  const [email, setEmail] = useState("");
+
+  const handleSubscribe = async () => {
+ 
+    try {
+      await sentNewsletter(email);
+      setEmail("");
+    } catch (error) {
+      console.log(`Greška pri prijavi na newsletter: ${error.message}`);
+    } 
+  };
+
+  const handleEmailChange = (event) => {
+    setEmail(event.target.value);
+  };
   return (
     <div className="newsletter-container">
       <div className="content">
@@ -19,8 +37,10 @@ export function Newsletter() {
             <Input
               className="newsletter-input"
               placeholder="Pošalji svoj e-mail"
+              value={email}
+              onChange={handleEmailChange}
             />
-            <div className="button-container">
+            <div className="button-container" onClick={handleSubscribe}>
               <Button className="newsletter-btn">
                 <img src="/assets/icons/btn-submit.svg" alt="icons" />
               </Button>
