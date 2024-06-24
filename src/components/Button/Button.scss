@@ -1,0 +1,216 @@
+@import "../../styles/Colors.scss";
+
+.login-btn {
+  width: 125px;
+  height: 46px;
+  background-color: $loginButton;
+  color: $whiteColor;
+  border: none;
+  font-family: "Clash Display";
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.lng-button {
+  background-color: transparent;
+  color: $whiteColor;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  border: none;
+  background: none;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.ticket-btn {
+  width: 154px;
+  height: 44px;
+  background-color: $yellowButton;
+  color: $textColor2;
+  outline: none;
+  border: none;
+  border-radius: 12px;
+  font-family: "Clash Display";
+  font-size: 16px;
+  line-height: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.read-more {
+  width: 171px;
+  height: 44px;
+  background-color: $yellowButton;
+  color: $textColor2;
+  outline: none;
+  border: none;
+  border-radius: 12px;
+  font-family: "Clash Display";
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.details-btn {
+  width: 226px;
+  height: 44px;
+  background-color: $yellowButton;
+  color: $textColor2;
+  outline: none;
+  border: none;
+  border-radius: 12px;
+  font-family: "Clash Display";
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.speakers-btn {
+  width: 274px;
+  height: 44px;
+  background-color: $yellowButton;
+  color: $textColor2;
+  outline: none;
+  border: none;
+  border-radius: 12px;
+  font-family: "Clash Display";
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.news-btn {
+  width: 212px;
+  height: 44px;
+  background-color: $yellowButton;
+  color: $textColor2;
+  outline: none;
+  border: none;
+  border-radius: 12px;
+  font-family: "Clash Display";
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.newsletter-btn {
+  width: 44px;
+  height: 42px;
+  background-color: $inputButton;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.tab-btn {
+  width: auto;
+  height: 38px;
+  gap: 8px;
+  padding: 0 16px;
+  border: 1px solid $tabButtonBorder;
+  border-radius: 8px;
+  background-color: transparent;
+  color: $tabButton;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 400;
+  cursor: pointer;
+
+  &.active {
+    background-color: $tabButton;
+    color: $whiteColor;
+  }
+  &:hover {
+    background-color: $tabButton;
+    color: $whiteColor;
+  }
+}
+
+.speake-read-more {
+  width: 112px;
+  height: 33px;
+  background-color: $speakersButton;
+  color: $whiteColor;
+  outline: none;
+  border: none;
+  font-family: "Clash Display";
+  gap: 32px;
+  border-radius: 8px;
+  opacity: 0px;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.popup-close {
+  width: 81px;
+  height: 33px;
+  background-color: $speakersButton;
+  color: $whiteColor;
+  outline: none;
+  border: none;
+  font-family: "Clash Display";
+  gap: 32px;
+  border-radius: 8px;
+  opacity: 0px;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.gallery-btn{
+  width: 32px;
+  height: 32px;
+  border: 1px solid $platinumPartnerBorder;
+  border-radius: 100%;
+  background-color: $galleryButton;
+  cursor: pointer;
+}
+
+.open-gallery-btn{
+  width: 46px;
+  height: 46px;
+  border: 1px solid $openGalleryBorder;
+  border-radius: 100%;
+  background-color: $openGalleryButton;
+  cursor: pointer;
+}
+
+.price-button{
+  width: 172px;
+  height: 44px;
+  background-color: $yellowButton;
+  color: $textColor2;
+  outline: none;
+  border: none;
+  border-radius: 12px;
+  font-family: "Clash Display";
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.accept-cookies-btn{
+  width: 211px;
+  height: 44px;
+  background-color: $yellowButton;
+  color: $textColor2;
+  outline: none;
+  border: none;
+  border-radius: 12px;
+  font-family: "Clash Display";
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 600;
+  cursor: pointer;
+}

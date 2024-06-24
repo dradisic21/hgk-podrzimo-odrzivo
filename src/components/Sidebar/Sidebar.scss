@@ -1,0 +1,79 @@
+@import "../../styles/Colors.scss";
+
+.menu {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  background-color: $primaryBackground;
+
+  
+  .mobile-nav-container {
+    margin: 0 2px;
+    box-sizing: border-box;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    .mobile-logo {
+      padding-top: 57px;
+    }
+
+    .mobile-nav-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+
+      .nav-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding-top: 50px;
+        height: 100%;
+        font-weight: 500;
+        margin-block-start: 0;
+        margin-block-end: 0;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        padding-inline-start: 0;
+        z-index: 2;
+
+        a {
+          cursor: pointer;
+          font-size: 18px;
+          text-decoration: none;
+          color: $whiteColor;
+
+          .text {
+            font-size: 18px;
+          }
+        }
+      }
+
+      .nav-actions{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        .language-content{
+          height: 60px;
+        }
+
+        .login-button{
+          padding-top: 5px;
+        }
+        .hgk-logo{
+          padding-top: 30px;
+        }
+      }
+    }
+  }
+}

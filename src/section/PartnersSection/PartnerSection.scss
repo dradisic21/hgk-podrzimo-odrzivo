@@ -1,0 +1,272 @@
+@import "../../styles/Colors.scss";
+
+.partners-section-container {
+  width: 100%;
+  max-width: 1920px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  .balloon-container{
+    width: 100%;
+    position: absolute;
+   
+ 
+    .balloon-par-one{
+      width: 100%;
+      max-width: 590px;
+      position: absolute;
+      top: 180px;
+      right: 0;
+      z-index: 0;
+      animation: move-one 30s ease-in-out infinite;
+    }
+    .balloon-par-two {
+      width: 100%;
+      max-width: 70px;
+      position: absolute;
+      top: 90px;
+      right: 150px;
+      z-index: 0;
+      animation: move-two 65s ease-in-out infinite;
+    }
+    .balloon-par-three {
+      width: 100%;
+      max-width: 190px;
+      position: absolute;
+      bottom: 45px;
+      left: 30%;
+      z-index: 0;
+      animation: move-three 40s ease-in-out infinite;
+    }
+
+    .balloon-par-four{
+      width: 100%;
+      max-width: 590px;
+      position: absolute;
+      bottom: 25px;
+      right: 0;
+      z-index: 0;
+      animation: move-four 40s ease-in-out infinite;
+    }
+    .balloon-par-five{
+      width: 100%;
+      max-width: 40px;
+      position: absolute;
+      bottom: 445px;
+      left: 300px;
+      z-index: 0;
+      animation: move-five 40s ease-in-out infinite;
+    }
+    .balloon-six{
+      width: 100%;
+      max-width: 590px;
+      position: absolute;
+      bottom: 545px;
+      left: 0;
+      z-index: 0;
+      animation: move-four 40s ease-in-out infinite;
+    }
+
+
+    @keyframes move-one {
+      0% {
+        transform: translateY(0);
+      }
+      25% {
+        transform: translateY(30px); 
+      }
+      50% {
+        transform: translateY(-30px); 
+      }
+      75% {
+        transform: translateY(20px); 
+      }
+      100% {
+        transform: translateY(0); 
+      }
+    }
+    
+    @keyframes move-two {
+      0% {
+        transform: translateY(0);
+      }
+      25% {
+        transform: translateY(30px); 
+      }
+      50% {
+        transform: translateY(-30px); 
+      }
+      75% {
+        transform: translateY(20px); 
+      }
+      100% {
+        transform: translateY(0); 
+      }
+    }
+    @keyframes move-three {
+      0% {
+        transform: translate(0, 0);
+      }
+      25% {
+        transform: translate(20px, 0px);
+      }
+      50% {
+        transform: translate(-20px, 30px);
+      }
+      75% {
+        transform: translate(20px, 0px);
+      }
+      100% {
+        transform: translate(0, 0);
+      }
+    }
+    @keyframes move-four {
+      0% {
+        transform: translateY(0);
+      }
+      25% {
+        transform: translateY(30px); 
+      }
+      50% {
+        transform: translateY(-30px); 
+      }
+      75% {
+        transform: translateY(20px); 
+      }
+      100% {
+        transform: translateY(0); 
+      }
+    }
+    @keyframes move-five {
+      0% {
+        transform: translate(0, 0);
+      }
+      25% {
+        transform: translate(20px, -30px);
+      }
+      50% {
+        transform: translate(-20px, 30px);
+      }
+      75% {
+        transform: translate(20px, -30px);
+      }
+      100% {
+        transform: translate(0, 0);
+      }
+    }
+  }
+
+  .partners-content {
+    width: 100%;
+    max-width: 1360px;
+    z-index: 1;
+
+    .partners-titles {
+      text-align: center;
+
+      .title {
+        font-size: 54px;
+        font-weight: 600;
+        line-height: 65px;
+        text-align: center;
+      }
+    }
+  }
+  .partners {
+    .partners-main {
+      padding: 24px 0;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .partners-section-container {
+    width: 100%;
+    max-width: 1920px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+    .balloon-container{
+      width: 100%;
+      max-width: 1920px;
+   
+      .balloon-par-one{
+        width: 100%;
+        max-width: 290px;
+        position: absolute;
+        top: 180px;
+        right: 0;
+        
+      }
+      .balloon-par-two {
+        width: 100%;
+        max-width: 70px;
+        position: absolute;
+        top: 90px;
+        right: 10%;
+        z-index: 0;
+      }
+      .balloon-par-three {
+        width: 100%;
+        max-width: 290px;
+        position: absolute;
+        bottom: 45px;
+        left: 10%;
+      }
+  
+      .balloon-par-four{
+        width: 100%;
+        max-width: 190px;
+        position: absolute;
+        bottom: 25px;
+        right: 0;
+      }
+      .balloon-par-five{
+        width: 100%;
+        max-width: 40px;
+        position: absolute;
+        bottom: 145px;
+        left: 10px;
+       
+      }
+      .balloon-par-six{
+        width: 100%;
+        max-width: 290px;
+        position: absolute;
+        bottom: 545px;
+        left: 0;
+        
+      }
+     
+    }
+  
+    .partners-content {
+      width: 100%;
+      max-width: 1360px;
+      z-index: 1;
+  
+      .partners-titles {
+        text-align: center;
+  
+        .title {
+          font-size: 54px;
+          font-weight: 600;
+          line-height: 65px;
+          text-align: center;
+        }
+      }
+    }
+    .partners {
+      .partners-main {
+        padding: 24px 0;
+      }
+    }
+  }
+}

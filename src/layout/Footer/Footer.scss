@@ -1,0 +1,118 @@
+@import "../../styles/Colors.scss";
+
+.footer-container {
+  width: 100%;
+  max-width: 1920px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: $gradientBackground;
+  margin: 0 auto;
+  padding: 40px 0;
+
+  .logos-content {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    .footer-logo{
+      width: 100%;
+      max-width: 276px;
+    }
+    .hgk-footer-logo{
+      width: 90px;
+      height: 60px;
+      
+    }
+  }
+
+  .footer-nav-content {
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+
+    .footer-nav-list {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      padding: 0 75px;
+      height: 100%;
+      font-weight: 500;
+
+      .active-link {
+        cursor: pointer;
+        font-size: 18px;
+        text-decoration: none;
+        color: $whiteColor;
+        position: relative;
+
+        &.active {
+          color: $textColor3;
+        }
+
+        &:hover {
+          color: $textColor3;
+        }
+      }
+    }
+  }
+
+  .privacy-content {
+    text-align: center;
+
+    .privacy {
+        font-size: 14px;
+        line-height: 17px;
+        font-weight: 400;
+        color: $textColor3;
+        cursor: pointer;
+    }
+
+    .footer-copyright{
+        font-size: 12px;
+        line-height: 14px;
+        font-weight: 400;
+
+        span{
+            color: $textColor3;
+        }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer-container {
+
+    .logos-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+
+   
+    }
+  
+    .footer-nav-content {
+      display: flex;
+      justify-content: center;
+      padding-top: 40px;
+  
+      .footer-nav-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        padding: 0 75px;
+        height: 100%;
+        font-weight: 500;
+  
+
+      }
+    }
+  }
+}

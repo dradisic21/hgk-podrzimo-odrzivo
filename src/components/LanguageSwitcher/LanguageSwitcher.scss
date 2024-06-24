@@ -1,0 +1,46 @@
+@import "../../styles/Colors.scss";
+
+.language-switcher {
+    position: relative;
+    display: inline-block;
+    border: 1px solid $borderLine;
+    height: auto;
+    border-radius: 8px;
+    transition: height 0.3s ease;
+    z-index: 999;
+
+    &.open {
+      height: 54px;
+    }
+
+    .dropdown-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 4px;
+      padding: 8px;
+      background-color: transparent;
+      color: $whiteColor;
+      border: none;
+      cursor: pointer;
+
+      span {
+        font-size: 14px;
+        font-weight: 600;
+
+        &.active {
+          color: $activeColor; 
+        }
+      }
+    }
+  
+    .dropdown-content {
+      display: block;
+      position: absolute;
+      background-color: transparent;
+      overflow: hidden;
+    
+    }
+  }
+  
+  

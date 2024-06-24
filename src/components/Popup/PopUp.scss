@@ -1,0 +1,86 @@
+@import "../../styles/Colors.scss";
+
+.popup-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  .popup-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    max-height: 90%;
+    background: $cardBackgorund;
+    margin: 20px 10px;
+    border-radius: 8px;
+    overflow-y: auto;
+
+    .popup-content {
+      padding: 48px 48px;
+     
+      
+
+      .speaker-image {
+        width: 100%;
+        border-radius: 8px;
+        padding-top: 16px;
+      }
+
+      .card-title {
+        font-size: 18px;
+        line-height: 22px;
+        font-weight: 600;
+        margin-block-start: 0;
+        margin-block-end: 0;
+        color: $textColor3;
+      }
+
+      .close-button {
+        position: absolute;
+        top: 48px;
+        right: 48px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        color: #333;
+      }
+
+      .speaker-name {
+        font-size: 24px;
+        font-weight: bold;
+        color: $whiteColor;
+        margin-bottom: 10px;
+      }
+
+      .speaker-body {
+        font-size: 16px;
+        line-height: 1.5;
+        color: $whiteColor;
+        margin-bottom: 20px;
+        word-wrap: break-word;
+          word-break: break-all;
+          white-space: normal;
+      }
+
+      .popup-action {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .popup-contant {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 12px;
+        }
+      }
+    }
+  }
+}

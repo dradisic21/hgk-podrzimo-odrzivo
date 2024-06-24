@@ -1,0 +1,207 @@
+@import "../../styles/Colors.scss";
+
+.price-section-container {
+  width: 100%;
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  .balloon-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    .balloon-one {
+      width: 100%;
+      max-width: 590px;
+      position: absolute;
+      bottom: 50px;
+      left: 0;
+      z-index: 0;
+      animation: move-one 30s ease-in-out infinite;
+    }
+
+    .dots-one {
+      width: 100%;
+      max-width: 390px;
+      position: absolute;
+      top: 150px;
+      bottom: 50px;
+      left: 0;
+      opacity: 0.3;
+      z-index: 0;
+      
+    }
+
+    @keyframes move-one {
+      0% {
+        transform: translateY(0);
+      }
+      25% {
+        transform: translateY(60px);
+      }
+      50% {
+        transform: translateY(-90px);
+      }
+      75% {
+        transform: translateY(60px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+  }
+
+  .price-section-content {
+    width: 100%;
+    max-width: 1400px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    padding: 100px 0 40px 0;
+    z-index: 1;
+
+    .box {
+      width: 100%;
+      max-width: 432px;
+      border-radius: 24px;
+      background: $priceCardBackground;
+      position: relative;
+
+      &:first-child::before {
+        content: "Most popular";
+        position: absolute;
+        top: -60px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #ae529f;
+        padding: 16px 0 40px 0;
+        border-radius: 16px 16px 0 0;
+        width: 100%;
+        max-width: 432px;
+        border-radius: -10px 10px 0 0;
+        font-size: 28px;
+        line-height: 34px;
+        font-weight: 500;
+        color: $whiteColor;
+        text-align: center;
+        z-index: -1;
+      }
+
+      .box-content {
+        padding: 48px;
+        z-index: 999;
+
+        .benefits-pre-title {
+          font-size: 14px;
+          line-height: 17px;
+          font-weight: 400;
+          margin-block-start: 0;
+          margin-block-end: 0;
+        }
+        .benefits-title {
+          font-size: 28px;
+          line-height: 34px;
+          font-weight: 500;
+          margin-block-start: 0;
+          margin-block-end: 0;
+          padding-top: 8px;
+        }
+        .benefits-subtitle {
+          font-size: 16px;
+          line-height: 20px;
+          font-weight: 400;
+          margin-block-start: 0;
+          margin-block-end: 0;
+          padding-top: 8px;
+        }
+
+        .view-benefits-button {
+            display: none;
+            width: auto;
+            background-color: transparent;
+            color: $textColor3;
+            border-bottom: 1px solid $textColor3;
+            cursor: pointer;
+            margin-top: 16px;
+        }
+
+        .benefits {
+          padding: 32px 0;
+          border-bottom: none;
+
+         
+          .close-benefits-button {
+            display: none;
+            width: auto;
+            background-color: transparent;
+            color: $textColor3;
+            border-bottom: 1px solid $textColor3;
+            cursor: pointer;
+            margin-top: 24px;
+          }
+
+          &.expanded {
+            .view-benefits-button {
+              display: none;
+            }
+
+            .close-benefits-button {
+              display: inline-block;
+            }
+          }
+
+          div:not(:last-child) {
+            border-bottom: 1px solid $borderLine;
+
+            .benefit-text {
+              font-size: 16px;
+              line-height: 20px;
+              font-weight: 400;
+              margin-block-start: 0;
+              margin-block-end: 0;
+              padding: 16px 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .price-section-container {
+    .price-section-content {
+      .box {
+        .box-content {
+          .view-benefits-button {
+            display: inline-block;
+            z-index: 1;
+          }
+          .benefits {
+            overflow: hidden;
+            max-height: 0;
+            opacity: 0;
+            visibility: hidden;
+            padding: 16px 0;
+
+            &.expanded {
+              max-height: 100%;
+              opacity: 1;
+              visibility: visible;
+            }
+
+            .close-benefits-button {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

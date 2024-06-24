@@ -1,0 +1,242 @@
+@import "../../styles/Colors.scss";
+
+.conference-registration-container {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 32px 0 40px 0;
+
+  .balloon-container {
+    width: 100%;
+    max-width: 1920px;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    .balloon-con-one {
+      width: 100%;
+      max-width: 290px;
+      position: absolute;
+      top: 0px;
+      left: 0%;
+      z-index: 0;
+      animation: move-con-one 30s ease-in-out infinite;
+    }
+    .balloon-con-two {
+      width: 100%;
+      max-width: 490px;
+      position: absolute;
+      top: 90px;
+      right: 0;
+      z-index: 0;
+      animation: move-con-two 65s ease-in-out infinite;
+    }
+    .balloon-con-three {
+      width: 100%;
+      max-width: 490px;
+      position: absolute;
+      top: 45px;
+      left: 0;
+      z-index: 0;
+      animation: move-con-three 40s ease-in-out infinite;
+    }
+
+    @keyframes move-con-one {
+      0% {
+        transform: translate(0, 0);
+      }
+      25% {
+        transform: translate(20px, 20px);
+      }
+      50% {
+        transform: translate(20px, 30px);
+      }
+      75% {
+        transform: translate(20px, 20px);
+      }
+      100% {
+        transform: translate(0, 0);
+      }
+    }
+
+    @keyframes move-con-two {
+      0% {
+        transform: translateY(0);
+      }
+      25% {
+        transform: translateY(30px);
+      }
+      50% {
+        transform: translateY(-30px);
+      }
+      75% {
+        transform: translateY(20px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+    @keyframes move-con-three {
+      0% {
+        transform: translateY(0);
+      }
+      25% {
+        transform: translateY(30px);
+      }
+      50% {
+        transform: translateY(-30px);
+      }
+      75% {
+        transform: translateY(20px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+  }
+
+  .conference-box {
+    width: 100%;
+    max-width: 1127px;
+    border: 1px solid $silverBorder;
+    border-radius: 20px;
+    background-color: $conferenceBoxBackground;
+    padding: 40px 64px 64px 64px;
+    z-index: 1;
+
+    .tab-buttons {
+      padding: 8px;
+      display: inline-flex;
+      border-radius: 12px;
+      gap: 8px;
+      background: $conferenceBoxBackground;
+    }
+  }
+  .list-content {
+    .content {
+      .program-list {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        border-bottom: 1px solid $cianBorder;
+
+        &:last-of-type {
+          border-bottom: none; 
+        }
+
+        .title-content {
+          display: flex;
+          flex: 1;
+          max-width: 20%;
+          flex-wrap: wrap;
+          word-wrap: break-word;
+          word-break: break-all;
+          white-space: normal;
+
+          
+
+          .program-title {
+            font-size: 20px;
+            line-height: 25px;
+            font-weight: 600;
+            color: $textColor5;
+
+          }
+        }
+
+        .body-content {
+          display: flex;
+          flex: 2;
+          max-width: 80%;
+          flex-wrap: wrap;
+          word-wrap: break-word;
+          word-break: break-all;
+          white-space: normal;
+          font-size: 16px;
+          line-height: 19px;
+          font-weight: 400;
+
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+    .conference-registration-container {
+
+      .balloon-container {
+       
+    
+        .balloon-one {
+          width: 100%;
+          max-width: 190px;
+          position: absolute;
+          top: 0px;
+          left: 0%;
+          z-index: 0;
+          animation: move-one 30s ease-in-out infinite;
+        }
+        .balloon-two {
+          width: 100%;
+          max-width: 290px;
+          position: absolute;
+          top: 30px;
+          right: 0;
+          z-index: 0;
+          animation: move-two 65s ease-in-out infinite;
+        }
+        .balloon-three {
+          width: 100%;
+          max-width: 290px;
+          position: absolute;
+          top: 45px;
+          left: 0;
+          z-index: 0;
+          animation: move-three 40s ease-in-out infinite;
+        }
+    
+        
+        
+    
+        
+      }
+        .conference-box {
+          padding: 40px 16px 16px 16px;
+          margin: 0 10px;
+      
+          .tab-buttons {
+            display: inline-flex;
+            align-items: flex-start;
+          }
+        }
+        .list-content {
+          .content {
+            .program-list {
+              display: flex;
+              flex-direction: column;
+              flex-wrap: wrap;
+              align-items: flex-start;
+             
+      
+              .title-content {
+                display: flex;
+                flex: 1;
+                max-width: 100%;
+                flex-wrap: wrap;
+              }
+      
+              .body-content {
+                max-width: 100%;
+                padding-bottom: 24px;
+              }
+            }
+          }
+        }
+      }
+      
+}

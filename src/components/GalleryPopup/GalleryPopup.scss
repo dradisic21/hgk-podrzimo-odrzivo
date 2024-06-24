@@ -1,0 +1,282 @@
+@import "../../styles/Colors.scss";
+
+.gallery-popup-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  
+  .gallery-popup-container {
+    position: relative;
+    width: 100%;
+    max-width: 1600px;
+    max-height: 90%;
+    margin: 20px 10px;
+    border-radius: 8px;
+    overflow-y: auto;
+    background-color: $galleryPopupBackground;
+   
+
+    .gallery-popup-content {
+      padding: 48px 48px;
+
+      .close-button {
+        position: absolute;
+        top: 10px;
+        right: 60px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        color: #333;
+        z-index: 1;
+      }
+
+      .popup-images {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+
+        .alice-carousel {
+          position: relative;
+
+          .alice-carousel__prev-btn,
+          .alice-carousel__next-btn {
+            width: 48px;
+            height: 48px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            border: none;
+            color: black;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 10;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 100%;
+            background: none;
+
+            &::before {
+              content: "";
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              border-radius: 100%;
+              background-color: $controlGalleryButton;
+              opacity: 0.3;
+              z-index: -1;
+            }
+
+            .alice-carousel__prev-btn-item,
+            .alice-carousel__next-btn-item {
+              position: relative;
+              z-index: 1;
+
+              span {
+                font-size: 34px;
+                color: white;
+              }
+            }
+          }
+
+          .alice-carousel__prev-btn {
+            left: 60px;
+
+            .alice-carousel__prev-btn-item {
+              span {
+                padding-right: 3px;
+              }
+            }
+          }
+
+          .alice-carousel__next-btn {
+            right: 60px;
+
+            .alice-carousel__next-btn-item {
+              span {
+                padding-left: 3px;
+              }
+            }
+          }
+
+          .alice-carousel__dots {
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            bottom: -25px;
+            width: 100%;
+
+            .alice-carousel__dots-item {
+              width: 8px;
+              height: 8px;
+              border-radius: 10px;
+              background-color: white;
+              margin: 0 5px;
+              transition: all 0.4s ease;
+
+              &.__active {
+                width: 30px;
+                height: 8px;
+                background-color: #ae529f;
+              }
+            }
+          }
+        }
+
+        .popup-image {
+          width: 100%;
+          height: 800px;
+          object-fit: cover;
+          border-radius: 8px;
+
+          img {
+            width: 100%;
+            height: 780px;
+            object-fit: cover;
+            border-radius: 8px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .gallery-popup-backdrop {
+    
+    .gallery-popup-container {
+      .gallery-popup-content {
+        padding: 38px 28px;
+  
+        .close-button {
+          position: absolute;
+          top: 5px;
+          right: 30px;
+          background: none;
+          border: none;
+          cursor: pointer;
+          font-size: 16px;
+          color: #333;
+          z-index: 1;
+        }
+  
+        .popup-images {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 10px;
+  
+          .alice-carousel {
+            position: relative;
+  
+            .alice-carousel__prev-btn,
+            .alice-carousel__next-btn {
+              width: 38px;
+              height: 38px;
+              position: absolute;
+              top: 50%;
+              transform: translateY(-50%);
+              border: none;
+              color: black;
+              cursor: pointer;
+              padding: 10px;
+              z-index: 10;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              border-radius: 100%;
+              background: none;
+  
+              &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 100%;
+                background-color: $controlGalleryButton;
+                opacity: 0.3;
+                z-index: -1;
+              }
+  
+              .alice-carousel__prev-btn-item,
+              .alice-carousel__next-btn-item {
+                position: relative;
+                z-index: 1;
+  
+                span {
+                  font-size: 28px;
+                  color: white;
+                }
+              }
+            }
+  
+            .alice-carousel__prev-btn {
+              left: 30px;
+  
+              .alice-carousel__prev-btn-item {
+                span {
+                  padding-right: 3px;
+                }
+              }
+            }
+  
+            .alice-carousel__next-btn {
+              right: 30px;
+  
+              .alice-carousel__next-btn-item {
+                span {
+                  padding-left: 3px;
+                }
+              }
+            }
+  
+            .alice-carousel__dots {
+              display: flex;
+              justify-content: center;
+              position: absolute;
+              bottom: -25px;
+              width: 100%;
+  
+              .alice-carousel__dots-item {
+                width: 8px;
+                height: 8px;
+                border-radius: 10px;
+                background-color: white;
+                margin: 0 5px;
+                transition: all 0.4s ease;
+  
+                &.__active {
+                  width: 30px;
+                  height: 8px;
+                  background-color: #ae529f;
+                }
+              }
+            }
+          }
+  
+          .popup-image {
+            width: 100%;
+            max-width: 600px;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+            display: flex;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,227 @@
+@import "../../styles/Colors.scss";
+
+.support-sustainable_container {
+  width: 100%;
+  max-width: 1920px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 160px 0 32px 0;
+  margin: 0;
+  overflow: hidden;
+
+  .balloon-container{
+    width: 100%;
+    max-width: 1920px;
+    position: absolute;
+
+    .balloon-sup-one{
+      width: 100%;
+      max-width: 590px;
+      position: absolute;
+      top: 50px;
+      left: 620px;
+      z-index: 0;
+      animation: move-one 30s ease-in-out infinite;
+    }
+    .balloon-sup-two {
+      width: 100%;
+      max-width: 105px;
+      position: absolute;
+      top: 90px;
+      left: 700px;
+      z-index: 0;
+      animation: move-two 65s ease-in-out infinite;
+    }
+    .balloon-sup-three {
+      width: 100%;
+      max-width: 590px;
+      position: absolute;
+      top: 45px;
+      left: 0;
+      z-index: 0;
+      animation: move-three 40s ease-in-out infinite;
+    }
+
+    @keyframes move-one {
+      0% {
+        transform: translate(0, 0);
+      }
+      25% {
+        transform: translate(60px, -40px);
+      }
+      50% {
+        transform: translate(-20px, 30px);
+      }
+      75% {
+        transform: translate(20px, -30px);
+      }
+      100% {
+        transform: translate(0, 0);
+      }
+    }
+    
+    @keyframes move-two {
+      0% {
+        transform: translate(0, 0);
+      }
+      25% {
+        transform: translate(60px, -40px);
+      }
+      50% {
+        transform: translate(-40px, 190px);
+      }
+      75% {
+        transform: translate(80px, -130px);
+      }
+      100% {
+        transform: translate(0, 0);
+      }
+    }
+    @keyframes move-three {
+      0% {
+        transform: translate(0, 0);
+      }
+      25% {
+        transform: translate(20px, -30px);
+      }
+      50% {
+        transform: translate(20px, 30px);
+      }
+      75% {
+        transform: translate(20px, -30px);
+      }
+      100% {
+        transform: translate(0, 0);
+      }
+    }
+  }
+
+  .title-content {
+    width: 100%;
+    max-width: 640px;
+    z-index: 1;
+
+    .subheadline {
+      font-size: 20px;
+        line-height: 25px;
+        font-weight: 600;
+        color: $textColor3;
+        margin-block-start: 0;
+        margin-block-end: 0;
+    }
+
+    .support-title {
+      font-size: 40px;
+      line-height: 48px;
+      font-weight: 500;
+      margin-block-start: 0;
+      margin-block-end: 0;
+      padding-top: 12px;
+    }
+
+    .line {
+      width: 120px;
+      border-bottom: 4px solid $yellowBackground;
+      background-color: $yellowBackground;
+      margin-top: 12px;
+    }
+    .text-content {
+      font-size: 28px;
+      line-height: 34px;
+      font-weight: 500;
+    }
+  }
+
+  .image-content {
+    padding-top: 6px;
+    z-index: 1;
+    img {
+      width: 100%;
+      max-width: 453px;
+    }
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .support-sustainable_container {
+        padding-top: 24px;
+
+        .balloon-container{
+          width: 100%;
+          position: absolute;
+      
+          .balloon-sup-one{
+            width: 100%;
+            max-width: 290px;
+            position: absolute;
+            top: 50px;
+            left: 0;
+            z-index: 0;
+            animation: move-one 30s ease-in-out infinite;
+          }
+          .balloon-sup-two {
+            width: 100%;
+            max-width: 105px;
+            position: absolute;
+            top: 90px;
+            left: 0;
+          }
+          .balloon-sup-three {
+            width: 100%;
+            max-width: 290px;
+            position: absolute;
+            top: 45px;
+            right: 10px;
+          }
+        }
+      
+        .title-content {
+          padding: 0 10px;
+
+          .subheadline {
+            font-size: 20px;
+            line-height: 25px;
+            font-weight: 600;
+            color: $textColor3;
+          }
+      
+          .support-title {
+            font-size: 32px;
+            line-height: 39px;
+            font-weight: 500;
+          }
+      
+          .line {
+            width: 120px;
+            border-bottom: 4px solid $yellowBackground;
+            background-color: $yellowBackground;
+          }
+          .text-content {
+            font-size: 24px;
+            line-height: 29px;
+            font-weight: 500;
+          }
+        }
+      
+        .image-content {
+          position: relative;
+          right: 0;
+          width: 100%; 
+          height: 320px;
+          overflow: hidden;
+ 
+           img {
+             position: absolute;
+             top: 20px;
+             width: 100%;
+             max-width: 297px;
+             object-fit: cover; 
+             right: -15px;
+           }
+         }
+      }
+}
