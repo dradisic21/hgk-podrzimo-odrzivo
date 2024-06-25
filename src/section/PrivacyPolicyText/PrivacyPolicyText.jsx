@@ -108,7 +108,7 @@ export function PrivacyPolicyText() {
           <li>videonadzora u svrhu zaštite osoba i imovine</li>
         </ul>
       </div>
-
+    
       <div className="five-section">
         <h1 className="privacy-section-title">
           3. Obrada osobnih podataka putem videonadzora
@@ -124,7 +124,7 @@ export function PrivacyPolicyText() {
           propisanog postupka
         </p>
       </div>
-      
+
       <div className="six-section">
         <h1 className="privacy-section-title">4. Kolačići</h1>
 
@@ -257,24 +257,25 @@ export function PrivacyPolicyText() {
         </p>
 
         <p className="privacy-sub-text">
-          <span className="bold-text">Pravo na pristup (Članak 15.)</span> – u svakom trenutku imate pravo na
-          pristup svojim osobnim podacima koje obrađujemo  i možete zatražiti
-          detaljne informacije o svrsi obrade, o vrsti odnosno kategorijama
-          osobnih podataka koji se obrađuju uključujući i uvid u svoje osobne
-          podatke, o primateljima ili kategorijama primatelja te o predviđenom
-          razdoblju u kojem će osobni podaci biti pohranjeni.
+          <span className="bold-text">Pravo na pristup (Članak 15.)</span> – u
+          svakom trenutku imate pravo na pristup svojim osobnim podacima koje
+          obrađujemo  i možete zatražiti detaljne informacije o svrsi obrade, o
+          vrsti odnosno kategorijama osobnih podataka koji se obrađuju
+          uključujući i uvid u svoje osobne podatke, o primateljima ili
+          kategorijama primatelja te o predviđenom razdoblju u kojem će osobni
+          podaci biti pohranjeni.
         </p>
 
         <p className="privacy-sub-text">
-        <span className="bold-text">Pravo na ispravak (Članak 16.)</span>  – u svakom trenutku imate pravo tražiti
-          ispravak ili dopunu osobnih podataka ako su podaci netočni ili
-          nepotpuni.
+          <span className="bold-text">Pravo na ispravak (Članak 16.)</span>  – u
+          svakom trenutku imate pravo tražiti ispravak ili dopunu osobnih
+          podataka ako su podaci netočni ili nepotpuni.
         </p>
 
         <p className="privacy-sub-text">
-        <span className="bold-text">Pravo na brisanje (Članak 17.)</span>  – Imate pravo tražiti brisanje osobnih
-          podataka koje se na Vas   odnose ako je ispunjen jedan od sljedećih
-          uvjeta:
+          <span className="bold-text">Pravo na brisanje (Članak 17.)</span>  –
+          Imate pravo tražiti brisanje osobnih podataka koje se na Vas   odnose
+          ako je ispunjen jedan od sljedećih uvjeta:
         </p>
 
         <ul className="processing-list">
@@ -334,8 +335,10 @@ export function PrivacyPolicyText() {
         </ul>
 
         <p className="privacy-sub-text">
-        <span className="bold-text">Pravo na ograničenje obrade (Članak 18.)</span> – Imate pravo ishoditi
-          ograničenje obrade ako:
+          <span className="bold-text">
+            Pravo na ograničenje obrade (Članak 18.)
+          </span>{" "}
+          – Imate pravo ishoditi ograničenje obrade ako:
         </p>
 
         <ul className="processing-list">
@@ -350,17 +353,18 @@ export function PrivacyPolicyText() {
         </ul>
 
         <p className="privacy-sub-text">
-        <span className="bold-text">Pravo na prigovor (Članak 21.)</span> – Ako Vaše podatke obrađujemo prilikom
-          izvršavanja službenih ovlasti ili se prilikom obrade pozivamo na
-          legitimne interese možete podnijeti prigovor protiv takve obrade.
+          <span className="bold-text">Pravo na prigovor (Članak 21.)</span> –
+          Ako Vaše podatke obrađujemo prilikom izvršavanja službenih ovlasti ili
+          se prilikom obrade pozivamo na legitimne interese možete podnijeti
+          prigovor protiv takve obrade.
         </p>
 
         <p className="privacy-sub-text">
-        <span className="bold-text">Pravo na pritužbu</span> – Imate pravo na pritužbu ako smatrate da je obradom
-          osobnih podataka prekršena Opća uredba ili drugi propisi u vezi sa
-          zaštitom osobnih podataka. Za obavljanje nadzora nad obradom osobnih
-          podataka u Republici Hrvatskoj nadležna je Agencija za zaštitu osobnih
-          podataka.
+          <span className="bold-text">Pravo na pritužbu</span> – Imate pravo na
+          pritužbu ako smatrate da je obradom osobnih podataka prekršena Opća
+          uredba ili drugi propisi u vezi sa zaštitom osobnih podataka. Za
+          obavljanje nadzora nad obradom osobnih podataka u Republici Hrvatskoj
+          nadležna je Agencija za zaštitu osobnih podataka.
         </p>
 
         <p className="privacy-sub-text">

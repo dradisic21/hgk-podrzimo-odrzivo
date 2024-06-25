@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Button } from "../../components/Button/Button";
 import "./PriceSection.scss";
+import { Ballons } from "../../components/Balloons/Balloons";
 
 export function PriceSection() {
   const [benefitsVisible, setBenefitsVisible] = useState(false);
@@ -16,12 +17,8 @@ export function PriceSection() {
   return (
     <div className="price-section-container">
       <div className="balloon-container">
+        <Ballons />
         <img
-          src="/assets/balloons/conference-benefits-balloons/balloon1.svg"
-          alt="ballon"
-          className="balloon-one"
-        />
-            <img
           src="/assets/balloons/conference-benefits-balloons/dots1.svg"
           alt="ballon"
           className="dots-one"

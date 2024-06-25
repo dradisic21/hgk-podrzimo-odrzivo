@@ -3,6 +3,7 @@ import { getSaysSpeakers } from "../../services/Api";
 import { PopUp } from "../../components/Popup/PopUp";
 import { Button } from "../../components/Button/Button";
 import "./SpeakersSection.scss";
+import { Ballons } from "../../components/Balloons/Balloons";
 
 export function SpeakersSection() {
   const [speakers, setSpekaers] = useState([]);
@@ -37,26 +38,7 @@ export function SpeakersSection() {
   return (
     <div className="speaker_container">
       <div className="balloon-container">
-        <img
-          src="/assets/balloons/speakers-card-speakers-page-balloons/balloon1.svg"
-          alt="ballon"
-          className="balloon-one"
-        />
-        <img
-          src="/assets/balloons/speakers-card-speakers-page-balloons/balloon2.svg"
-          alt="ballon"
-          className="balloon-two"
-        />
-        <img
-          src="/assets/balloons/speakers-card-speakers-page-balloons/balloon3.svg"
-          alt="ballon"
-          className="balloon-three"
-        />
-        <img
-          src="/assets/balloons/speakers-card-speakers-page-balloons/balloon4.svg"
-          alt="ballon"
-          className="balloon-four"
-        />
+        <Ballons />
       </div>
       <div className="title-main">
         <h1 className="speaker-title">Što kažu naši supercool govornici</h1>

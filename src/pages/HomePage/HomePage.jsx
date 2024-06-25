@@ -17,8 +17,8 @@ import {Video} from "../../components/Video/Video";
 export default function HomePage() {
     return(
         <div className="home-page-container">
-             {/* <Video /> */}
-            <ImageSlider />
+             <Video />
+            {/* <ImageSlider /> */}
             <SupportSustainable />
             <ProgramDetails />
             <HomeSpeakersSection />

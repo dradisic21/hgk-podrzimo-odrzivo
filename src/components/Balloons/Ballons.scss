@@ -1,0 +1,196 @@
+.balloons-content {
+    width: 100%;
+    /* position: absolute; */
+    z-index: 0;
+
+    .xs-balloon {
+        width: 100%;
+        max-width: 41px;
+        position: absolute;
+        top: 50px;
+        left: 20px;
+        z-index: 0;
+        animation: move-one 50s ease-out infinite;
+
+        @keyframes move-one {
+            0%, 100% {
+                transform: translate(0, 0);
+            }
+            12.5% {
+                transform: translate(25%, 50%);
+            }
+            25% {
+                transform: translate(50%, 100%);
+            }
+            37.5% {
+                transform: translate(75%, 50%);
+            }
+            50% {
+                transform: translate(100%, 0);
+            }
+            62.5% {
+                transform: translate(75%, -50%);
+            }
+            75% {
+                transform: translate(50%, -100%);
+            }
+            87.5% {
+                transform: translate(25%, -50%);
+            }
+        }
+    }
+
+    .sm-balloon {
+        width: 100%;
+        max-width: 119px;
+        position: absolute;
+        top: 90px;
+        left: 700px;
+        z-index: 0;
+        animation: move-two 80s ease-out infinite;
+
+        @keyframes move-two {
+            0%, 100% {
+                transform: translate(0, 0);
+            }
+            15% {
+                transform: translate(-30%, 60%);
+            }
+            30% {
+                transform: translate(-60%, 120%);
+            }
+            45% {
+                transform: translate(-90%, 60%);
+            }
+            60% {
+                transform: translate(-120%, 0);
+            }
+            75% {
+                transform: translate(-90%, -60%);
+            }
+            90% {
+                transform: translate(-60%, -120%);
+            }
+        }
+    }
+
+    .md-balloon {
+        width: 100%;
+        max-width: 390px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 0;
+        animation: move-three 60s ease-out infinite;
+
+        @keyframes move-three {
+            0%, 100% {
+                transform: translate(-50%, -50%);
+            }
+            20% {
+                transform: translate(-50%, -25%);
+            }
+            40% {
+                transform: translate(-50%, 25%);
+            }
+            60% {
+                transform: translate(-50%, 50%);
+            }
+            80% {
+                transform: translate(-50%, 25%);
+            }
+        }
+    }
+
+    .lg-balloon {
+        width: 100%;
+        max-width: 490px;
+        position: absolute;
+        top: 300px;
+        right: 0;
+        z-index: 0;
+        animation: move-four 80s ease-out infinite;
+
+        @keyframes move-four {
+            0%, 100% {
+                transform: translate(0, 0);
+            }
+            10% {
+                transform: translate(-20%, 40%);
+            }
+            30% {
+                transform: translate(-40%, 80%);
+            }
+            50% {
+                transform: translate(-60%, 40%);
+            }
+            70% {
+                transform: translate(-80%, 0);
+            }
+            90% {
+                transform: translate(-60%, -40%);
+            }
+        }
+    }
+
+    .xxl-balloon {
+        width: 100%;
+        max-width: 590px;
+        position: absolute;
+        top: 45px;
+        left: 0;
+        z-index: 0;
+        animation: move-five 60s ease-out infinite;
+
+        @keyframes move-five {
+            0%, 100% {
+                transform: translate(0, 0);
+            }
+            15% {
+                transform: translate(30%, -30%);
+            }
+            35% {
+                transform: translate(60%, -60%);
+            }
+            55% {
+                transform: translate(90%, -30%);
+            }
+            75% {
+                transform: translate(120%, 0);
+            }
+            95% {
+                transform: translate(90%, 30%);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .balloons-content {
+        .xs-balloon {
+            width: 100%;
+            max-width: 41px;
+        }
+
+        .sm-balloon {
+            width: 100%;
+            max-width: 79px;
+        }
+
+        .md-balloon {
+            width: 100%;
+            max-width: 190px;
+        }
+
+        .lg-balloon {
+            width: 100%;
+            max-width: 290px;
+        }
+
+        .xxl-balloon {
+            width: 100%;
+            max-width: 390px;
+        }
+    }
+}

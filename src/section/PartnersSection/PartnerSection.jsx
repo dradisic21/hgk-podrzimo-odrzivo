@@ -5,42 +5,14 @@ import { SilverPartners } from "../../components/PartnersForAllPages/SilverPartn
 import { BronzedPartner } from "../../components/PartnersForAllPages/BronzedPartner/BronzedPartner";
 import { FriendsPartner } from "../../components/PartnersForAllPages/FriendsPartner/FriendsPartner";
 import "./PartnerSection.scss";
+import { Ballons } from "../../components/Balloons/Balloons";
 
 
 export function PartnerSection() {
   return (
     <div className="partners-section-container">
       <div className="balloon-container">
-        <img
-          src="/assets/balloons/partners-home-balloons/balloon1.svg"
-          alt="ballon"
-          className="balloon-par-one"
-        />
-        <img
-          src="/assets/balloons/partners-home-balloons/balloon2.svg"
-          alt="ballon"
-          className="balloon-par-two"
-        />
-        <img
-          src="/assets/balloons/partners-home-balloons/balloon3.svg"
-          alt="ballon"
-          className="balloon-par-three"
-        />
-        <img
-          src="/assets/balloons/partners-home-balloons/balloon4.svg"
-          alt="ballon"
-          className="balloon-par-four"
-        />
-         <img
-          src="/assets/balloons/partners-home-balloons/balloon5.svg"
-          alt="ballon"
-          className="balloon-par-five"
-        />
-         <img
-          src="/assets/balloons/partners-home-balloons/balloon6.svg"
-          alt="ballon"
-          className="balloon-par-six"
-        />
+        <Ballons />
       </div>
       <div className="partners-content">
         <div className="partners-titles">

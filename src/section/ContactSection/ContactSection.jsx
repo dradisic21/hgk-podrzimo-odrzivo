@@ -1,19 +1,11 @@
+import { Ballons } from "../../components/Balloons/Balloons";
 import "./ContactSection.scss";
 
 export function ContactSection() {
   return (
     <div className="contact-section-container">
        <div className="balloon-container">
-        <img
-          src="/assets/balloons/contact-balloons/balloon1.svg"
-          alt="ballon"
-          className="balloon-one"
-        />
-        <img
-          src="/assets/balloons/contact-balloons/balloon2.svg"
-          alt="ballon"
-          className="balloon-two"
-        />
+        <Ballons />
         <img
           src="/assets/balloons/contact-balloons/dots.svg"
           alt="ballon"

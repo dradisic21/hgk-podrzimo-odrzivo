@@ -1,9 +1,13 @@
 import { Button } from "../../components/Button/Button";
+import { Ballons } from "../../components/Balloons/Balloons";
 import "./BecomePartner.scss";
 
 export function BecomePartner() {
   return (
     <div className="become-partner_container">
+      <div className="balloon-container">
+        <Ballons />
+      </div>
       <div className="title-content">
         <p className="subheadline">DODJELA NAGRADA 2024</p>
         <h2 className="support-title">

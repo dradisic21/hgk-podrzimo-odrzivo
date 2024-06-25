@@ -1,3 +1,4 @@
+import { Ballons } from "../../components/Balloons/Balloons"
 import { Button } from "../../components/Button/Button"
 import "./SupportSustainable.scss"
 
@@ -6,9 +7,7 @@ export function SupportSustainable() {
     return(
         <div className="support-sustainable_container">
             <div className="balloon-container">
-                <img src="/assets/balloons/support-home-balloons/balloon1.svg" alt="ballon" className="balloon-sup-one"/>
-                <img src="/assets/balloons/support-home-balloons/balloon2.svg" alt="ballon"  className="balloon-sup-two"/>
-                <img src="/assets/balloons/support-home-balloons/balloon3.svg" alt="ballon"  className="balloon-sup-three"/>
+                <Ballons />
             </div>
             <div className="title-content">
                 <p className="subheadline">PODRŽIMO ODRŽIVO 2024</p>

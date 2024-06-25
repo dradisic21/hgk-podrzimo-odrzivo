@@ -1,19 +1,11 @@
+import { Ballons } from "../../components/Balloons/Balloons";
 import "./ConferencePageTextSection.scss";
 
 export function ConferencePageTextSection() {
   return (
     <div className="conference-page-text-container">
       <div className="balloon-container">
-        <img
-          src="/assets/balloons/conference-balloons/balloon1.svg"
-          alt="ballon"
-          className="balloon-one"
-        />
-        <img
-          src="/assets/balloons/conference-balloons/balloon2.svg"
-          alt="ballon"
-          className="balloon-two"
-        />
+       <Ballons />
         <img
           src="/assets/balloons/conference-balloons/dots.svg"
           alt="ballon"

@@ -3,12 +3,14 @@
 .privacy-policy-content {
   width: 100%;
   max-width: 890px;
+  position: relative;
   padding: 40px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 0 auto;
+  z-index: 1;
 
   .first-section {
     padding: 0 10px;

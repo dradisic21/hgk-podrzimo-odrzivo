@@ -13,115 +13,8 @@
 
   .balloon-container{
     width: 100%;
+    position: absolute;
  
-    .balloon-one{
-      width: 100%;
-      max-width: 590px;
-      position: absolute;
-      top: 50px;
-      right: 0;
-      z-index: 0;
-      animation: move-one 30s ease-in-out infinite;
-    }
-    .balloon-two {
-      width: 100%;
-      max-width: 105px;
-      position: absolute;
-      bottom: 190px;
-      right: 0;
-      z-index: 0;
-      animation: move-two 65s ease-in-out infinite;
-    }
-    .balloon-three {
-      width: 100%;
-      max-width: 290px;
-      position: absolute;
-      bottom: 45px;
-      left: 30%;
-      z-index: 0;
-      opacity: 0.3;
-      animation: move-three 40s ease-in-out infinite;
-    }
-
-    .balloon-four{
-      width: 100%;
-      max-width: 590px;
-      position: absolute;
-      top: 45px;
-      left: 0;
-      z-index: 0;
-      animation: move-four 40s ease-in-out infinite;
-    }
-
-    @keyframes move-one {
-      0% {
-        transform: translateY(0);
-      }
-      25% {
-        transform: translateY(30px); 
-      }
-      50% {
-        transform: translateY(-30px); 
-      }
-      75% {
-        transform: translateY(20px); 
-      }
-      100% {
-        transform: translateY(0); 
-      }
-    }
-    
-    @keyframes move-two {
-      0% {
-        transform: translateY(0);
-      }
-      25% {
-        transform: translateY(30px); 
-      }
-      50% {
-        transform: translateY(-30px); 
-      }
-      75% {
-        transform: translateY(20px); 
-      }
-      100% {
-        transform: translateY(0); 
-      }
-    }
-    @keyframes move-three {
-      0% {
-        transform: translate(0, 0);
-      }
-      25% {
-        transform: translate(20px, -30px);
-      }
-      50% {
-        transform: translate(-20px, 30px);
-      }
-      75% {
-        transform: translate(20px, -30px);
-      }
-      100% {
-        transform: translate(0, 0);
-      }
-    }
-    @keyframes move-four {
-      0% {
-        transform: translate(0, 0);
-      }
-      25% {
-        transform: translate(20px, -30px);
-      }
-      50% {
-        transform: translate(-20px, 30px);
-      }
-      75% {
-        transform: translate(20px, -30px);
-      }
-      100% {
-        transform: translate(0, 0);
-      }
-    }
   }
 
   .title-main {
@@ -240,34 +133,7 @@
 @media screen and (max-width: 768px) {
     .home-speaker_container {
 
-      .balloon-container{
-        width: 100%;
      
-        .balloon-one{
-          width: 100%;
-          max-width: 290px; 
-          position: absolute;
-          top: 45px;
-          right: 0;
-        }
-
-        .balloon-two {
-          width: 100%;
-          max-width: 75px;
-        }
-        .balloon-three {
-          width: 100%;
-          max-width: 130px;
-        }
-    
-        .balloon-four{
-          width: 100%;
-          max-width: 290px;
-          position: absolute;
-          top: 345px;
-          left: 0;
-        }
-      }
         .title-main {
           width: 100%;
           max-width: 600px;

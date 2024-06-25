@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { getNews } from "../../services/Api";
 import { Button } from "../../components/Button/Button";
 import "./NewsSection.scss";
+import { Ballons } from "../../components/Balloons/Balloons";
 
 export function NewsSection() {
   const [newsletter, setNewsletter] = useState([]);
@@ -39,21 +40,7 @@ export function NewsSection() {
   return (
     <div className="news-container">
       <div className="balloon-container">
-        <img
-          src="/assets/balloons/news-home-balloons/balloon1.svg"
-          alt="ballon"
-          className="balloon-one"
-        />
-        <img
-          src="/assets/balloons/news-home-balloons/balloon2.svg"
-          alt="ballon"
-          className="balloon-two"
-        />
-        <img
-          src="/assets/balloons/news-home-balloons/balloon3.svg"
-          alt="ballon"
-          className="balloon-three"
-        />
+        <Ballons />
       </div>
       <div className="news-titles-content">
         <h1 className="news-title">Pročitajte nešto od vijesti i događanja</h1>

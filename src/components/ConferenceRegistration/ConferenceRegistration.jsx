@@ -3,6 +3,7 @@ import { getPrograms } from "../../services/Api";
 import { Button } from "../Button/Button";
 import "./ConferenceRegistration.scss";
 import { SkeletonLoader } from "../SkeletonLoader/SkeletonLoader";
+import { Ballons } from "../Balloons/Balloons";
 
 export function ConferenceRegistration() {
   const [programs, setPrograms] = useState([]);
@@ -33,21 +34,7 @@ export function ConferenceRegistration() {
   return (
     <div className="conference-registration-container">
        <div className="balloon-container">
-        <img
-          src="/assets/balloons/news-home-balloons/balloon1.svg"
-          alt="ballon"
-          className="balloon-con-one"
-        />
-        <img
-          src="/assets/balloons/news-home-balloons/balloon2.svg"
-          alt="ballon"
-          className="balloon-con-two"
-        />
-        <img
-          src="/assets/balloons/news-home-balloons/balloon3.svg"
-          alt="ballon"
-          className="balloon-con-three"
-        />
+       <Ballons />
       </div>
       <div className="conference-box">
         <div className="tab-buttons">

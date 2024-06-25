@@ -7,6 +7,7 @@ import {
 import { Button } from "../Button/Button";
 import "./Gallery.scss";
 import { GalleryPopup } from "../GalleryPopup/GalleryPopup";
+import { Ballons } from "../Balloons/Balloons";
 
 export function Gallery() {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,16 +22,7 @@ export function Gallery() {
     <div className="gallery-container">
 
       <div className="balloon-container">
-        <img
-          src="/assets/balloons/conference-balloons/balloon3.svg"
-          alt="ballon"
-          className="balloon-one"
-        />
-        <img
-          src="/assets/balloons/conference-balloons/balloon4.svg"
-          alt="ballon"
-          className="balloon-two"
-        />
+        <Ballons />
       </div>
 
       <div className="gallery-content">
