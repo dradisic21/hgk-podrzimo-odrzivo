@@ -1,28 +1,40 @@
 import React, { useState, useEffect } from "react";
 import { getInstPartners } from "../../../services/Api";
+import { useTranslation } from 'react-i18next';
 import "./InstitutionalPartners.scss";
 
 export function InstitutionalPartners() {
   const [partners, setPartners] = useState([]);
+  const [isActive, setIsActive] = useState(false);
+  const { t, i18n } = useTranslation();
 
   useEffect(() => {
     async function fetchData() {
       try {
         const response = await getInstPartners();
-        setPartners(response.accordions);
-       
+        if (response && response.active_page) {
+          setPartners(response.accordions);
+          setIsActive(true);
+        } else {
+          setIsActive(false);
+        }
       } catch (error) {
         console.log("Dogodila se greška prilikom dohvaćanja podataka:", error);
+        setIsActive(false);
       }
     }
     fetchData();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [i18n.language]);
+
+  if (!isActive) {
+    return null; 
+  }
 
   return (
     <div className="institutional-partners-container">
       <div className="title-box">
-        <p className="title">Institucionalni partneri</p>
+        <p className="title">{t('Institucionalni partneri')}</p>
       </div>
 
       <div className="partner-box">
@@ -38,7 +50,7 @@ export function InstitutionalPartners() {
               <div className="text-content">
                 <p className="partner-name">{partner.title}</p>
                 <div className="text">
-                <div dangerouslySetInnerHTML={{ __html: partner.body }} />
+                  <div dangerouslySetInnerHTML={{ __html: partner.body }} />
                 </div>
               </div>
             </div>

@@ -6,8 +6,11 @@ import { Button } from "../Button/Button";
 import { menuSlide } from "../../ui/Anime/anime";
 // import { Curve } from "../../ui/Curve/Curve";
 import "./Sidebar.scss";
+import {useTranslation} from "react-i18next";
+import i18n from "../../services/i18n";
 
 export function Sidebar({ closeSidebar }) {
+  const { t } = useTranslation();
 
   
   return (
@@ -27,19 +30,19 @@ export function Sidebar({ closeSidebar }) {
         <div className="mobile-nav-content">
           <ul className="nav-list">
             <Link to="/o-konferenciji" onClick={closeSidebar}>
-              <p className="text">O konferenciji</p>
+              <p className="text">{t("About the conference")}</p>
             </Link>
             <Link to="/program" onClick={closeSidebar}>
-              <p className="text">Program</p>
+              <p className="text">{t("Program")}</p>
             </Link>
             <Link to="/govornici" onClick={closeSidebar}>
-              <p className="text">Govornici</p>
+              <p className="text">{t("Speakers")}</p>
             </Link>
             <Link to="/partneri" onClick={closeSidebar}>
-              <p className="text">Partneri</p>
+              <p className="text">{t("Partners")}</p>
             </Link>
             <Link to="/kontakt" onClick={closeSidebar}>
-              <p className="text">Kontakt</p>
+              <p className="text">{t("Contact")}</p>
             </Link>
           </ul>
          <div className="nav-actions">
@@ -51,7 +54,12 @@ export function Sidebar({ closeSidebar }) {
               <Button className="login-btn" name="Prijavi se" />
             </div>
             <div className="hgk-logo">
-              <img src="/assets/logo/hgk-logo.svg" alt="hgk-logo" />
+              {i18n.language === 'hr' &&
+                  <img src="/assets/logo/hgk-logo.svg" alt="hgk-logo"/>
+              }
+              {i18n.language === 'en' &&
+                  <img src="/assets/logo/hgk-logo-en.svg" alt="hgk-logo"/>
+              }
             </div>
         </div>
          

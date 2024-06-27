@@ -1,4 +1,5 @@
 import React, { useState, useEffect, Suspense } from "react";
+import { useTranslation } from 'react-i18next';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Nav } from "./layout/Nav/Nav";
 import { Cookies } from "./layout/Cookie/Cookies";
@@ -30,6 +31,7 @@ const PrivacyPolicy = React.lazy(() =>
 
 export function App() {
   const [loading, setLoading] = useState(true);
+  const { t, i18n } = useTranslation();
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -38,6 +40,10 @@ export function App() {
 
     return () => clearTimeout(timeout);
   }, []);
+
+  useEffect(() => {
+   
+  }, [i18n.language]);
 
   return (
     <Router>
@@ -51,17 +57,17 @@ export function App() {
             ) : (
               <Routes>
                 <Route path="/" element={<HomePage />} />
-                <Route path="o-konferenciji" element={<ConferencePage />} />
-                <Route path="program" element={<ProgramPage />} />
-                <Route path="govornici" element={<SpeakersPage />} />
-                <Route path="partneri" element={<PartnersPage />} />
-                <Route path="kontakt" element={<ContactPage />} />
+                <Route path={`/${t('o-konferenciji')}`} element={<ConferencePage />} />
+                <Route path={`/${t('program')}`} element={<ProgramPage />} />
+                <Route path={`/${t('govornici')}`} element={<SpeakersPage />} />
+                <Route path={`/${t('partneri')}`} element={<PartnersPage />} />
+                <Route path={`/${t('kontakt')}`} element={<ContactPage />} />
                 <Route
-                  path="prijava-na-konferenciju"
+                  path={`/${t('prijava-na-konferenciju')}`}
                   element={<ConferenceRegistrationPage />}
                 />
-                <Route path=":slug" element={<SingleNewsPage />} />
-                <Route path="politika-privatnosti" element={<PrivacyPolicy />} />
+                <Route path="/:slug" element={<SingleNewsPage />} />
+                <Route path={`/${t('politika-privatnosti')}`} element={<PrivacyPolicy />} />
               </Routes>
             )}
           </div>

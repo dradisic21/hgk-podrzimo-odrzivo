@@ -38,29 +38,30 @@
 
   .speakers-content {
     width: 100%;
-    max-width: 1400px;
+    max-width: 1450px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     gap: 22px;
     z-index: 1;
     margin: 0 30px;
 
     .speaker-card {
-      width: calc(50% - 16px);
-      // max-width: 664px;
-      min-height: 400px;
+      width: 100%;
+      max-width: 664px;
+      min-height: auto;
       background: $cardBackgorund;
       border: 3px solid $cardBorder;
       border-radius: 8px;
       margin: 0 10px;
-   
-
+      
+       
       .content {
         padding: 16px;
         margin: 48px;
+        
        
-
         .text {
             padding-top: 32px;
             word-wrap: break-word;

@@ -1,22 +1,24 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { getSaysSpeakers } from "../../services/Api";
+import { getHomeSpeakers } from "../../services/Api";
 import { Button } from "../../components/Button/Button";
 import "./HomeSpeakersSection.scss";
 import { Ballons } from "../../components/Balloons/Balloons";
+import {useTranslation} from "react-i18next";
 
 export function HomeSpeakersSection() {
   const [speakers, setSpekaers] = useState([{}]);
   const navigate = useNavigate();
+    const { t, i18n } = useTranslation();
 
-  const handleClick = () => {
+    const handleClick = () => {
     navigate("/govornici");
   };
 
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await getSaysSpeakers();
+        const response = await getHomeSpeakers();
         setSpekaers(response.accordions);
       } catch (error) {
         console.log("Dogodila se greška prilikom dohvaćanja podataka:", error);
@@ -24,7 +26,7 @@ export function HomeSpeakersSection() {
     }
     fetchData();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [i18n.language]);
 
   return (
     <div className="home-speaker_container">
@@ -32,16 +34,15 @@ export function HomeSpeakersSection() {
         <Ballons />
       </div>
       <div className="title-main">
-        <h1 className="speaker-title">Što kažu naši supercool govornici</h1>
+        <h1 className="speaker-title">{t("GOVORNICI KOJI INSPIRIRAJU I POTIČU NA AKCIJU")}</h1>
         <p className="speaker-subtitle">
-          Samo rečenica uvoda kako su nam super govornici i klikom idu na
-          p1regled govornika koji su na posebnoj stranici
+            {t("speakersSubTitle")}
         </p>
       </div>
 
       <div className="speakers-content">
-        {speakers.map((speaker) => (
-          <div className="speaker-card" key={speaker.id}>
+        {speakers.map((speaker, index) => (
+          <div className="speaker-card" key={index}>
             <div className="content">
               <div className="logo-image">
                 <img src="/assets/logo/speaker-logo.svg" alt="logo" />
@@ -68,7 +69,7 @@ export function HomeSpeakersSection() {
       <div className="btn-content">
         <Button
           type="button"
-          name="POGLEDAJ SVE GOVORNIKE"
+          name={t("POGLEDAJ SVE GOVORNIKE")}
           className="speakers-btn"
           onClick={handleClick}
         />

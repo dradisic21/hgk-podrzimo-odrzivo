@@ -6,6 +6,7 @@ import { Sidebar } from "../../components/Sidebar/Sidebar";
 import { LanguageSwitcher } from "../../components/LanguageSwitcher/LanguageSwitcher";
 import { Button } from "../../components/Button/Button";
 import "./Nav.scss";
+import i18n from "../../services/i18n";
 
 export function Nav() {
   const [isOpen, setOpen] = useState(false);
@@ -13,12 +14,12 @@ export function Nav() {
 
   useEffect(() => {
     if (isOpen) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = 'auto';
+      document.body.style.overflow = "auto";
     }
     return () => {
-      document.body.style.overflow = 'auto';
+      document.body.style.overflow = "auto";
     };
   }, [isOpen]);
 
@@ -41,7 +42,7 @@ export function Nav() {
         <div className="nav-content">
           <ul className="nav-list">
             <NavLink
-              to="/o-konferenciji"
+              to={`/${t("o-konferenciji")}`}
               className={({ isActive }) =>
                 isActive ? "active-link active" : "active-link"
               }
@@ -49,7 +50,7 @@ export function Nav() {
               {t("About the conference")}
             </NavLink>
             <NavLink
-              to="/program"
+              to={`/${t("program")}`}
               className={({ isActive }) =>
                 isActive ? "active-link active" : "active-link"
               }
@@ -57,7 +58,7 @@ export function Nav() {
               {t("Program")}
             </NavLink>
             <NavLink
-              to="/govornici"
+              to={`/${t("govornici")}`}
               className={({ isActive }) =>
                 isActive ? "active-link active" : "active-link"
               }
@@ -65,7 +66,7 @@ export function Nav() {
               {t("Speakers")}
             </NavLink>
             <NavLink
-              to="/partneri"
+              to={`/${t("partneri")}`}
               className={({ isActive }) =>
                 isActive ? "active-link active" : "active-link"
               }
@@ -73,7 +74,7 @@ export function Nav() {
               {t("Partners")}
             </NavLink>
             <NavLink
-              to="/kontakt"
+              to={`/${t("kontakt")}`}
               className={({ isActive }) =>
                 isActive ? "active-link active" : "active-link"
               }
@@ -89,12 +90,17 @@ export function Nav() {
           <div className="login-button">
             <Button
               className="login-btn"
-              name="Sign in"
+              name={t("Sign in")}
               onClick={handleSignIn}
             />
           </div>
           <div className="hgk-logo">
-            <img src="/assets/logo/hgk-logo.svg" alt="hgk-logo" />
+            {i18n.language === "hr" && (
+              <img src="/assets/logo/hgk-logo.svg" alt="hgk-logo" />
+            )}
+            {i18n.language === "en" && (
+              <img src="/assets/logo/hgk-logo-en.svg" alt="hgk-logo" />
+            )}
           </div>
         </div>
 

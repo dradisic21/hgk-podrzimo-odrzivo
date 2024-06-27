@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { getNews } from "../../services/Api";
-import { Button } from "../../components/Button/Button";
 import "./NewsSection.scss";
 import { Ballons } from "../../components/Balloons/Balloons";
+import {useTranslation} from "react-i18next";
 
 export function NewsSection() {
   const [newsletter, setNewsletter] = useState([]);
+  const { t, i18n } = useTranslation();
 
   useEffect(() => {
     async function fetchData() {
@@ -19,7 +20,7 @@ export function NewsSection() {
     }
     fetchData();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [i18n.language]);
 
   const formatDate = (dateString) => {
     const date = new Date(dateString);
@@ -42,12 +43,10 @@ export function NewsSection() {
       <div className="balloon-container">
         <Ballons />
       </div>
+      
       <div className="news-titles-content">
-        <h1 className="news-title">Pročitajte nešto od vijesti i događanja</h1>
-        <p className="news-subtitle">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been...
-        </p>
+        <h1 className="news-title">{t("Pročitajte nešto od vijesti i događanja")}</h1>
+      </div>
 
         <div className="news-content">
           {newsletter.map((news) => (
@@ -74,15 +73,7 @@ export function NewsSection() {
             </div>
           ))}
         </div>
-
-        <div className="btn-content">
-          <Button
-            type="button"
-            name="UČITAJ VIŠE VIJESTI"
-            className="news-btn"
-          />
-        </div>
-      </div>
+    
     </div>
   );
 }

@@ -4,7 +4,7 @@
   width: 100%;
   max-width: 1920px;
   height: 100%;
- 
+  z-index: 1;
 
   .header {
     position: relative;
@@ -15,6 +15,7 @@
     justify-content: center; 
     align-items: center;
     overflow: hidden; 
+    z-index: 1;
 
     &::before {
       content: "";

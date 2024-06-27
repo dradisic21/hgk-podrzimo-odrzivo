@@ -11,12 +11,33 @@
   font-size: 16px;
   font-weight: 500;
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $hoverButton2;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  &:hover:before {
+    transform: scaleX(1);
+  }
 
   &:hover {
-    background-color: $hoverButton2;
     color: $whiteColor;
   }
 }
+
 
 .lng-button {
   background-color: transparent;
@@ -45,12 +66,33 @@
   line-height: 12px;
   font-weight: 600;
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $hoverButton;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  &:hover:before {
+    transform: scaleX(1);
+  }
 
   &:hover {
-    background-color: $hoverButton;
     color: $whiteColor;
   }
 }
+
 
 .read-more {
   width: 171px;
@@ -65,12 +107,33 @@
   line-height: 20px;
   font-weight: 600;
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $hoverButton;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  &:hover:before {
+    transform: scaleX(1);
+  }
 
   &:hover {
-    background-color: $hoverButton;
     color: $whiteColor;
   }
 }
+
 
 .details-btn {
   width: 226px;
@@ -85,12 +148,33 @@
   line-height: 20px;
   font-weight: 600;
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $hoverButton;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  &:hover:before {
+    transform: scaleX(1);
+  }
 
   &:hover {
-    background-color: $hoverButton;
     color: $whiteColor;
   }
 }
+
 
 .speakers-btn {
   width: 274px;
@@ -105,12 +189,33 @@
   line-height: 20px;
   font-weight: 600;
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $hoverButton;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  &:hover:before {
+    transform: scaleX(1);
+  }
 
   &:hover {
-    background-color: $hoverButton;
     color: $whiteColor;
   }
 }
+
 
 .news-btn {
   width: 212px;
@@ -125,12 +230,33 @@
   line-height: 20px;
   font-weight: 600;
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $hoverButton;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  &:hover:before {
+    transform: scaleX(1);
+  }
 
   &:hover {
-    background-color: $hoverButton;
     color: $whiteColor;
   }
 }
+
 
 .newsletter-btn {
   width: 44px;
@@ -139,11 +265,29 @@
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
 
-  &:hover {
-    background: $hoverButton2;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $hoverButton2;
+    z-index: -1;
+    transform: scaleX(0) scaleY(0);
+    transform-origin: center;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  &:hover:before {
+    transform: scaleX(1) scaleY(1);
   }
 }
+
 
 .tab-btn {
   width: auto;
@@ -183,13 +327,33 @@
   font-size: 14px;
   font-weight: 400;
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
 
-  &:hover {
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-color: $hoverButton2;
-    color: $whiteColor;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease-in-out;
   }
 
+  &:hover:before {
+    transform: scaleX(1);
+  }
+
+  &:hover {
+    color: $whiteColor;
+  }
 }
+
 
 .popup-close {
   width: 81px;
@@ -214,6 +378,11 @@
   border-radius: 100%;
   background-color: $galleryButton;
   cursor: pointer;
+
+  &:hover {
+    transform: scale(1.1) ;
+    background: $hoverButton2;
+  }
 }
 
 .open-gallery-btn{
@@ -223,13 +392,9 @@
   border-radius: 100%;
   background-color: $openGalleryButton;
   cursor: pointer;
-
-  &:hover {
-    background: $hoverButton2;
-  }
 }
 
-.price-button{
+.price-button {
   width: 172px;
   height: 44px;
   background-color: $yellowButton;
@@ -242,6 +407,7 @@
   line-height: 20px;
   font-weight: 600;
   cursor: pointer;
+  transition: background-color 0.3s, color 0.3s; 
 
   &:hover {
     background-color: $hoverButton;
@@ -249,7 +415,7 @@
   }
 }
 
-.accept-cookies-btn{
+.accept-cookies-btn {
   width: 211px;
   height: 44px;
   background-color: $yellowButton;
@@ -262,9 +428,11 @@
   line-height: 20px;
   font-weight: 600;
   cursor: pointer;
+  transition: background-color 0.3s, color 0.3s; 
 
   &:hover {
     background-color: $hoverButton;
     color: $whiteColor;
   }
 }
+

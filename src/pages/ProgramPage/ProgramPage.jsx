@@ -7,12 +7,14 @@ import { Newsletter } from "../../section/Newsletter/Newsletter";
 import { Footer } from "../../layout/Footer/Footer";
 
 import "./ProgramPage.scss";
+import {useTranslation} from "react-i18next";
 
 export default function ProgramPage() {
-  const navigate = useNavigate();
+    const navigate = useNavigate();
+    const { t } = useTranslation();
 
-  const handleGetTicketClick = () => {
-    navigate("/prijava-na-konferenciju");
+    const handleGetTicketClick = () => {
+    navigate(`/${t('prijava-na-konferenciju')}`);
   };
 
   return (
@@ -20,9 +22,9 @@ export default function ProgramPage() {
       <div className="header">
         <div className="header-content">
           <h1 className="header-title">PROGRAM</h1>
-          <p className="header-subtitle">Podržimo održivo 2024.</p>
+          <p className="header-subtitle">{t("Podržimo održivo 2024.")}</p>
           <div className="button-content">
-          <Button type="button" className="ticket-btn" name="GET TICKET" onClick={handleGetTicketClick} />
+          <Button type="button" className="ticket-btn" name={t("Kupi ulaznice")} onClick={handleGetTicketClick} />
           </div>
         </div>
       </div>

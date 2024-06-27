@@ -1,13 +1,16 @@
 import { Ballons } from "../../components/Balloons/Balloons";
 import "./ConferencePageTextSection.scss";
+import {useTranslation} from "react-i18next";
 
 export function ConferencePageTextSection() {
+  const { t } = useTranslation();
+
   return (
     <div className="conference-page-text-container">
       <div className="balloon-container">
        <Ballons />
         <img
-          src="/assets/balloons/conference-balloons/dots.svg"
+          src="/assets/balloons-component/dots.svg"
           alt="ballon"
           className="dots"
         />
@@ -16,37 +19,39 @@ export function ConferencePageTextSection() {
       <div className="conference-page-text-content">
         <div className="super-text">
           <h2 className="super-text-title">
-            Prvi super tekst koji sve objašnjava.
+            {t("O KONFERENCIJI")}
           </h2>
           <p className="super-text-subtitle">
-            Hrvatska gospodarska komora vas s velikim zadovoljstvom poziva na 4.
-            međunarodnu konferenciju Podržimo održivo 2023. - Suradnja i nove
-            tehnologije za održivost koja će se održati 19. rujna, u Laubi, na
-            adresi prilaz baruna Filipovića 23a, u Zagrebu.
+            {t("aboutConferenceFirstParagraph")}
           </p>
         </div>
         <div className="super-text">
-          <h2 className="super-text-title">
-            Prvi super tekst koji sve objašnjava.
-          </h2>
           <p className="super-text-subtitle">
-            Podržimo održivo središnji je događaj o održivosti u Hrvatskoj koji
-            svake godine okuplja sve relevantne dionike oko ključnih tema puta
-            prema održivom poslovanju.
+            {t("aboutConferenceSecondParagraph")}
           </p>
         </div>
-        <div className="super-text">
-          <h2 className="super-text-title">
-            Prvi super tekst koji sve objašnjava.
-          </h2>
-          <p className="super-text-subtitle">
-            Ove godine ćemo kroz novi format ključnih dijaloga (eng. key
-            dialogues) predstaviti govornike na četiri glavne tematske cjeline
-            konferencije: Net positive put, suradnja i održivost, tehnologije i
-            dizajn za održivost, te vodstvo u održivosti. Svaka tema u središte
-            razgovora stavit će suradnju i nove tehnologije za održivost.
-          </p>
-        </div>
+          <img src="/assets/growth-infograph.png" alt="Infograf rasta"/>
+          <div className="super-text-subtitle">
+              <p>{t("Konferencija je namijenjena")}</p>
+              <ul>
+                  <li>
+                      {t("Poslovnoj zajednici")}
+                  </li>
+                  <li>
+                      {t("Državnoj i lokalnoj upravi")}
+                  </li>
+                  <li>
+                      {t("Neprofitnim organizacijama i civilnom sektoru")}
+                  </li>
+                  <li>
+                      {t("Akademskoj zajednici")}
+                  </li>
+                  <li>
+                      {t("Ostalim zainteresiranim institucijama i profesionalcima")}
+                  </li>
+              </ul>
+          </div>
+
       </div>
     </div>
   );

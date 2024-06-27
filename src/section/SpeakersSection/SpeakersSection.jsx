@@ -4,11 +4,13 @@ import { PopUp } from "../../components/Popup/PopUp";
 import { Button } from "../../components/Button/Button";
 import "./SpeakersSection.scss";
 import { Ballons } from "../../components/Balloons/Balloons";
+import {useTranslation} from "react-i18next";
 
 export function SpeakersSection() {
   const [speakers, setSpekaers] = useState([]);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [selectedSpeakerId, setSelectedSpeakerId] = useState({});
+  const { t, i18n } = useTranslation();
 
   useEffect(() => {
     async function fetchData() {
@@ -21,14 +23,8 @@ export function SpeakersSection() {
     }
     fetchData();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [i18n.language]);
 
-  const truncateText = (text, maxLength) => {
-    if (text.length > maxLength) {
-      return text.substring(0, maxLength) + "...";
-    }
-    return text;
-  };
 
   const openPopup = (speakerId) => {
     setSelectedSpeakerId(speakerId);
@@ -41,10 +37,9 @@ export function SpeakersSection() {
         <Ballons />
       </div>
       <div className="title-main">
-        <h1 className="speaker-title">Što kažu naši supercool govornici</h1>
+        <h1 className="speaker-title">{t("GOVORNICI KOJI INSPIRIRAJU I POTIČU NA AKCIJU")}</h1>
         <p className="speaker-subtitle">
-          Samo rečenica uvoda kako su nam super govornici i klikom idu na
-          p1regled govornika koji su na posebnoj stranici
+          {t("speakersSubTitle")}
         </p>
       </div>
 
@@ -62,13 +57,7 @@ export function SpeakersSection() {
                 <div className="speaker-info">
                   <h2 className="speaker-name">{speaker.title}</h2>
                 </div>
-
-                <div
-                  className="text"
-                  dangerouslySetInnerHTML={{
-                    __html: truncateText(speaker.body, 100),
-                  }}
-                />
+                <p className="text">{speaker.subtitle}</p>
               </div>
             </div>
             <div className="speaker-actions">
@@ -78,7 +67,20 @@ export function SpeakersSection() {
                 className="speake-read-more"
                 onClick={() => openPopup(speaker.id)}
               />
-              <img src="/assets/icons/social-icons/linkedin-cyan.svg" alt="" />
+              <div>
+              {speaker.childs && speaker.childs.map((child) => (
+                  <a href={child.title} key={child.id} target="_blank" rel="noopener noreferrer">
+                  {child.title.includes("linkedin") && (
+                    <img
+                      src="/assets/icons/social-icons/linkedin-cyan.svg"
+                      alt="LinkedIn"
+                    />
+                  )}
+                </a>
+                ))}
+              
+              </div>
+                  
             </div>
           </div>
         ))}

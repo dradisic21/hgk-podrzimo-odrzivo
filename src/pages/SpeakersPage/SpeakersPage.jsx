@@ -6,22 +6,24 @@ import { Newsletter } from "../../section/Newsletter/Newsletter";
 import { Footer } from "../../layout/Footer/Footer";
 import "./SpeakersPage.scss";
 import { SpeakersSection } from "../../section/SpeakersSection/SpeakersSection";
+import {useTranslation} from "react-i18next";
 
 export default function SpeakersPage() {
-  const navigate = useNavigate();
+    const navigate = useNavigate();
+    const { t } = useTranslation();
 
-  const handleGetTicketClick = () => {
-    navigate("/prijava-na-konferenciju");
+    const handleGetTicketClick = () => {
+    navigate(`/${t('prijava-na-konferenciju')}`);
   };
 
   return (
     <div className="speakers-page-container">
       <div className="header">
         <div className="header-content">
-          <h1 className="header-title">GOVORNICI</h1>
-          <p className="header-subtitle">Podržimo održivo 2024.</p>
+          <h1 className="header-title">{t("GOVORNICI")}</h1>
+          <p className="header-subtitle">{t("Podržimo održivo 2024.")}</p>
           <div className="button-content">
-            <Button type="button" className="ticket-btn" name="GET TICKET" onClick={handleGetTicketClick} />
+            <Button type="button" className="ticket-btn" name={t("Kupi ulaznice")} onClick={handleGetTicketClick} />
           </div>
         </div>
       </div>

@@ -1,5 +1,5 @@
-// import { Video } from "../../components/Video/Video";
-import { ImageSlider } from "../../components/ImageSlider/ImageSlider";
+import {Video} from "../../components/Video/Video";
+// import { ImageSlider } from "../../components/ImageSlider/ImageSlider";
 import { SupportSustainable } from "../../section/SupportSustainable/SupportSustainable";
 import { ProgramDetails } from "../../section/ProgramDetails/ProgramDetails";
 import { HomeSpeakersSection } from "../../section/HomeSpeakersSection/HomeSpeakersSection";
@@ -10,7 +10,7 @@ import { Newsletter } from "../../section/Newsletter/Newsletter";
 import { Footer } from "../../layout/Footer/Footer";
 import { PartnerSection } from "../../section/PartnersSection/PartnerSection";
 import "./HomePage.scss"
-import {Video} from "../../components/Video/Video";
+
 
 
 

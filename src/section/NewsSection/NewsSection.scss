@@ -5,7 +5,10 @@
   max-width: 1920px;
   position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  z-index: 1;
 
   .balloon-container {
     width: 100%;
@@ -13,6 +16,7 @@
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 0;
   }
 
   .news-titles-content {
@@ -25,24 +29,35 @@
       font-size: 54px;
       line-height: 65px;
       font-weight: 600;
+      z-index: 1;
     }
     .news-subtitle {
       font-size: 18px;
       line-height: 22px;
       font-weight: 400;
+      z-index: 1;
+      margin: 0 5px;
     }
   }
 
   .news-content {
+    width: 100%;
+    max-width: 1400px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+    z-index: 1;
+
     .news-box {
       width: 100%;
       max-width: 432px;
       height: 524px;
       display: flex;
       flex-direction: column;
+      
       a {
         color: $whiteColor;
-        text-decoration: none;
 
         .content {
           padding: 12px;
@@ -89,6 +104,7 @@
   }
   .btn-content {
     padding: 40px 0;
+    z-index: 1;
   }
 }
 

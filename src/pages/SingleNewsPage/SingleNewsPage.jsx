@@ -6,11 +6,13 @@ import { Newsletter } from "../../section/Newsletter/Newsletter";
 import { Footer } from "../../layout/Footer/Footer";
 import { getSingleNews } from "../../services/Api";
 import "./SingleNewsPage.scss";
+import {useTranslation} from "react-i18next";
 
 export default function SingleNewsPage() {
   const navigate = useNavigate();
   const { slug } = useParams();
   const [news, setNews] = useState([[]]);
+  const { t, i18n } = useTranslation();
 
   useEffect(() => {
     async function fetchData() {
@@ -22,10 +24,10 @@ export default function SingleNewsPage() {
       }
     }
     fetchData();
-  }, [slug]);
+  }, [slug, i18n.language]);
 
   const handleGetTicketClick = () => {
-    navigate("/prijava-na-konferenciju");
+    navigate(`/${t('prijava-na-konferenciju')}`);
   };
 
   return (
@@ -37,13 +39,12 @@ export default function SingleNewsPage() {
         />
 
         <div className="header-content">
-          <h1 className="header-title">O KONFERENCIJI</h1>
           <p className="header-subtitle">{news.title}</p>
           <div className="button-content">
             <Button
               type="button"
               className="ticket-btn"
-              name="GET TICKET"
+              name={t("Kupi ulaznice")}
               onClick={handleGetTicketClick}
             />
           </div>

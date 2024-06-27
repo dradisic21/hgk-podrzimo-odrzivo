@@ -4,10 +4,13 @@ import { Button } from "../../components/Button/Button";
 import { SocialMedia } from "../../components/SocialMedia/SocilaMedia";
 import { sentNewsletter } from "../../services/Api";
 import "./Newsletter.scss";
+import {useTranslation} from "react-i18next";
 
 
 export function Newsletter() {
   const [email, setEmail] = useState("");
+  const { t } = useTranslation();
+
 
   const handleSubscribe = async () => {
  
@@ -28,15 +31,14 @@ export function Newsletter() {
         <div className="title-content">
           <h1 className="newsletter-title">Newsletter:</h1>
           <p className="newsletter-text">
-            Prijavite se na naš newsletter i budite u koraku s najnovijim ESG
-            trendovima.
+            {t("Prijavite se na naš newsletter i budite u koraku s najnovijim ESG trendovima")}
           </p>
         </div>
         <div className="input-content">
           <div className="input-container">
             <Input
               className="newsletter-input"
-              placeholder="Pošalji svoj e-mail"
+              placeholder={t("Pošalji svoj e-mail")}
               value={email}
               onChange={handleEmailChange}
             />

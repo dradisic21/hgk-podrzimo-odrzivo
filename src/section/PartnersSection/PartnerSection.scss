@@ -8,11 +8,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 1;
 
   .balloon-container{
     width: 100%;
     position: absolute;
-   
+   z-index: 0;
  
   }
 
@@ -33,6 +34,7 @@
     }
   }
   .partners {
+    z-index: 1;
     .partners-main {
       padding: 24px 0;
     }

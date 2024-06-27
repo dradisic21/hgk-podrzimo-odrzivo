@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import { Button } from "../../components/Button/Button";
 import "./PriceSection.scss";
 import { Ballons } from "../../components/Balloons/Balloons";
+import {useTranslation} from "react-i18next";
 
 export function PriceSection() {
   const [benefitsVisible, setBenefitsVisible] = useState(false);
+  const { t } = useTranslation();
 
   const showBenefits = () => {
     setBenefitsVisible(true);
@@ -19,7 +21,7 @@ export function PriceSection() {
       <div className="balloon-container">
         <Ballons />
         <img
-          src="/assets/balloons/conference-benefits-balloons/dots1.svg"
+          src="/assets/balloons-component/dots.svg"
           alt="ballon"
           className="dots-one"
         />
@@ -28,35 +30,34 @@ export function PriceSection() {
         {/* Box 1 */}
         <div className="box">
           <div className="box-content">
-            <p className="benefits-pre-title">PODRŽIMO ODRŽIVO 2024</p>
-            <h3 className="benefits-title">EARLY BIRD TICKET</h3>
+            <p className="benefits-pre-title">{t("do 14.7.")}</p>
+            <h3 className="benefits-title">EARLY BIRD</h3>
             <p className="benefits-subtitle">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod.
+              400 EUR + {t("PDV")}
             </p>
             {!benefitsVisible && (
               <div className={`view-benefits-button `} onClick={showBenefits}>
-                Pogledaj benefite...
+                {t("Pogledaj benefite")}...
               </div>
             )}
             <div className={`benefits ${benefitsVisible ? "expanded" : ""}`}>
               <div>
-                <p className="benefit-text">Benefit 1</p>
+                <p className="benefit-text">{t("dva dana konferencije (9. i 10. rujna 2024.)")}</p>
               </div>
               <div>
-                <p className="benefit-text">Benefit 2</p>
+                <p className="benefit-text">{t("dodatni informativni/edukativni materijali")}</p>
               </div>
               <div>
-                <p className="benefit-text">Benefit 3</p>
+                <p className="benefit-text">{t("party otvorenja na 1. danu uz catering (finger-food & piće)")}</p>
               </div>
               <div>
-                <p className="benefit-text">Benefit 4</p>
+                <p className="benefit-text">{t("umrežavanje na 2. danu uz catering  (doručak, ručak & piće)")}</p>
               </div>
               <div>
-                <p className="benefit-text">Benefit 5</p>
+                <p className="benefit-text">{t("simultani prijevod (ENG-HRV)")}</p>
               </div>
               <div>
-                <p className="benefit-text">Benefit 6</p>
+                <p className="benefit-text">{t("potvrda o sudjelovanju")}</p>
               </div>
               <div>
                 {benefitsVisible && (
@@ -64,14 +65,14 @@ export function PriceSection() {
                     className={`close-benefits-button `}
                     onClick={closeBenefits}
                   >
-                    Zatvori...
+                    {t("Zatvori")}...
                   </div>
                 )}
               </div>
             </div>
 
             <div className="price-button-content">
-              <Button name="KUPI ULAZNICU" className="price-button" />
+              <Button name={t("Kupi ulaznice")} className="price-button" />
             </div>
           </div>
         </div>
@@ -79,51 +80,49 @@ export function PriceSection() {
         {/* Box 2 */}
         <div className="box">
           <div className="box-content">
-            <p className="benefits-pre-title">1. DAY TICKET</p>
-            <h3 className="benefits-title">CIJENA 1</h3>
+            <p className="benefits-pre-title">{t("od 15.7.-15.8.")}</p>
+            <h3 className="benefits-title">{t("CIJENA")} 1</h3>
             <p className="benefits-subtitle">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod.
+              450 EUR + {t("PDV")}
             </p>
-
             {!benefitsVisible && (
-              <div className={`view-benefits-button `} onClick={showBenefits}>
-                Pogledaj benefite...
-              </div>
+                <div className={`view-benefits-button `} onClick={showBenefits}>
+                  {t("Pogledaj benefite")}...
+                </div>
             )}
-
             <div className={`benefits ${benefitsVisible ? "expanded" : ""}`}>
               <div>
-                <p className="benefit-text">Benefit 1</p>
+                <p className="benefit-text">{t("dva dana konferencije (9. i 10. rujna 2024.)")}</p>
               </div>
               <div>
-                <p className="benefit-text">Benefit 2</p>
+                <p className="benefit-text">{t("dodatni informativni/edukativni materijali")}</p>
               </div>
               <div>
-                <p className="benefit-text">Benefit 3</p>
+                <p className="benefit-text">{t("party otvorenja na 1. danu uz catering (finger-food & piće)")}</p>
               </div>
               <div>
-                <p className="benefit-text">Benefit 4</p>
+                <p className="benefit-text">{t("umrežavanje na 2. danu uz catering  (doručak, ručak & piće)")}</p>
               </div>
               <div>
-                <p className="benefit-text">Benefit 5</p>
+                <p className="benefit-text">{t("simultani prijevod (ENG-HRV)")}</p>
               </div>
               <div>
-                <p className="benefit-text">Benefit 6</p>
+                <p className="benefit-text">{t("potvrda o sudjelovanju")}</p>
               </div>
-
-              {benefitsVisible && (
-                <div
-                  className={`close-benefits-button `}
-                  onClick={closeBenefits}
-                >
-                  Zatvori...
-                </div>
-              )}
+              <div>
+                {benefitsVisible && (
+                    <div
+                        className={`close-benefits-button `}
+                        onClick={closeBenefits}
+                    >
+                      {t("Zatvori")}...
+                    </div>
+                )}
+              </div>
             </div>
 
             <div className="price-button-content">
-              <Button name="KUPI ULAZNICU" className="price-button" />
+              <Button name={t("Kupi ulaznice")} className="price-button" />
             </div>
           </div>
         </div>
@@ -131,60 +130,99 @@ export function PriceSection() {
         {/* Box 3 */}
         <div className="box">
           <div className="box-content">
-            <p className="benefits-pre-title">2. DAY TICKET</p>
-            <h3 className="benefits-title">CIJENA 2</h3>
+            <p className="benefits-pre-title">{t("od 16.8.")}</p>
+            <h3 className="benefits-title">{t("CIJENA")} 2</h3>
             <p className="benefits-subtitle">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod.
+              500 EUR + {t("PDV")}
             </p>
-
             {!benefitsVisible && (
-              <div className={`view-benefits-button `} onClick={showBenefits}>
-                Pogledaj benefite...
-              </div>
+                <div className={`view-benefits-button `} onClick={showBenefits}>
+                  {t("Pogledaj benefite")}...
+                </div>
             )}
-
             <div className={`benefits ${benefitsVisible ? "expanded" : ""}`}>
               <div>
-                <p className="benefit-text">Benefit 1</p>
+                <p className="benefit-text">{t("dva dana konferencije (9. i 10. rujna 2024.)")}</p>
               </div>
               <div>
-                <p className="benefit-text">Benefit 2</p>
+                <p className="benefit-text">{t("dodatni informativni/edukativni materijali")}</p>
               </div>
               <div>
-                <p className="benefit-text">Benefit 3</p>
+                <p className="benefit-text">{t("party otvorenja na 1. danu uz catering (finger-food & piće)")}</p>
               </div>
               <div>
-                <p className="benefit-text">Benefit 4</p>
+                <p className="benefit-text">{t("umrežavanje na 2. danu uz catering  (doručak, ručak & piće)")}</p>
               </div>
               <div>
-                <p className="benefit-text">Benefit 5</p>
+                <p className="benefit-text">{t("simultani prijevod (ENG-HRV)")}</p>
               </div>
               <div>
-                <p className="benefit-text">Benefit 6</p>
+                <p className="benefit-text">{t("potvrda o sudjelovanju")}</p>
               </div>
-
-              {!benefitsVisible && (
-                <Button
-                  type="button"
-                  className={`view-benefits-button `}
-                  name="Pogledaj benefite"
-                  onClick={showBenefits}
-                />
-              )}
-
-              {benefitsVisible && (
-                <div
-                  className={`close-benefits-button `}
-                  onClick={closeBenefits}
-                >
-                  Zatvori...
-                </div>
-              )}
+              <div>
+                {benefitsVisible && (
+                    <div
+                        className={`close-benefits-button `}
+                        onClick={closeBenefits}
+                    >
+                      {t("Zatvori")}...
+                    </div>
+                )}
+              </div>
             </div>
 
             <div className="price-button-content">
-              <Button name="KUPI ULAZNICU" className="price-button" />
+              <Button name={t("Kupi ulaznice")} className="price-button" />
+            </div>
+          </div>
+        </div>
+
+        {/* Box 4 */}
+        <div className="box">
+          <div className="box-content">
+            <p className="benefits-pre-title"></p>
+            <h3 className="benefits-title">{t("STUDENTI")}</h3>
+            <p className="benefits-subtitle">
+              50 EUR + {t("PDV")}
+            </p>
+            {!benefitsVisible && (
+                <div className={`view-benefits-button `} onClick={showBenefits}>
+                  {t("Pogledaj benefite")}...
+                </div>
+            )}
+            <div className={`benefits ${benefitsVisible ? "expanded" : ""}`}>
+              <div>
+                <p className="benefit-text">{t("dva dana konferencije (9. i 10. rujna 2024.)")}</p>
+              </div>
+              <div>
+                <p className="benefit-text">{t("dodatni informativni/edukativni materijali")}</p>
+              </div>
+              <div>
+                <p className="benefit-text">{t("party otvorenja na 1. danu uz catering (finger-food & piće)")}</p>
+              </div>
+              <div>
+                <p className="benefit-text">{t("umrežavanje na 2. danu uz catering  (doručak, ručak & piće)")}</p>
+              </div>
+              <div>
+                <p className="benefit-text">{t("simultani prijevod (ENG-HRV)")}</p>
+              </div>
+              <div>
+                <p className="benefit-text">{t("potvrda o sudjelovanju")}</p>
+              </div>
+              <div>
+                {benefitsVisible && (
+                    <div
+                        className={`close-benefits-button `}
+                        onClick={closeBenefits}
+                    >
+                      {t("Zatvori")}...
+                    </div>
+                )}
+              </div>
+            </div>
+
+            <div className="price-button-content">
+              <Button name={t("Kupi ulaznice")} className="price-button" />
             </div>
           </div>
         </div>

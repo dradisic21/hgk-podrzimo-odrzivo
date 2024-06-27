@@ -1,13 +1,15 @@
 import { Link } from "react-router-dom";
 import "./SocialMedia.scss"
+import {useTranslation} from "react-i18next";
 
 
 export function SocialMedia() {
+  const { t } = useTranslation();
   return (
     <div className="social-media-container">
       <div className="social-media-content">
         <div className="text">
-          <h3 className="title">Pratite nas na:</h3>
+          <h3 className="title">{t("Pratite nas na")}:</h3>
         </div>
 
         <div className="icons">

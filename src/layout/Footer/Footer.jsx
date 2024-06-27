@@ -1,6 +1,8 @@
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { useCallback } from "react";
 import "./Footer.scss";
+import { useTranslation } from "react-i18next";
+import i18n from "../../services/i18n";
 
 const scrollToTop = () => {
   window.scrollTo({
@@ -10,15 +12,16 @@ const scrollToTop = () => {
 };
 export function Footer() {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const handleNavLinkClick = useCallback(() => {
     scrollToTop();
   }, []);
 
   const handlePrivacyClick = useCallback(() => {
-    navigate("/politika-privatnosti");
+    navigate(`/${t("politika-privatnosti")}`);
     scrollToTop();
-  }, [navigate]);
+  }, [navigate, t]);
 
   return (
     <div className="footer-container">
@@ -26,67 +29,86 @@ export function Footer() {
         <Link to="/" onClick={handleNavLinkClick}>
           <img src="/assets/logo/nav-logo.svg" alt="logo" />
         </Link>
-        <img
-          src="/assets/logo/hgk-logo.svg"
-          alt="hgk logo"
-          className="hgk-footer-logo"
-        />
+        {i18n.language === "hr" && (
+          <img
+            src="/assets/logo/hgk-logo.svg"
+            alt="hgk logo"
+            className="hgk-footer-logo"
+          />
+        )}
+        {i18n.language === "en" && (
+          <img
+            src="/assets/logo/hgk-logo-en.svg"
+            alt="hgk logo"
+            className="hgk-footer-logo"
+          />
+        )}
       </div>
 
       <div className="footer-nav-content">
         <ul className="footer-nav-list">
           <NavLink
-            to="/o-konferenciji"
+            to={`/${t("o-konferenciji")}`}
             className={({ isActive }) =>
               isActive ? "active-link active" : "active-link"
             }
             onClick={handleNavLinkClick}
           >
-            O konferenciji
+            {t("About the conference")}
           </NavLink>
           <NavLink
-            to="/program"
+            to={`/${t("program")}`}
             className={({ isActive }) =>
               isActive ? "active-link active" : "active-link"
             }
             onClick={handleNavLinkClick}
           >
-            Program
+            {t("Program")}
           </NavLink>
           <NavLink
-            to="/govornici"
+            to={`/${t("govornici")}`}
             className={({ isActive }) =>
               isActive ? "active-link active" : "active-link"
             }
             onClick={handleNavLinkClick}
           >
-            Govornici
+            {t("Speakers")}
           </NavLink>
           <NavLink
-            to="/partneri"
+            to={`/${t("partneri")}`}
             className={({ isActive }) =>
               isActive ? "active-link active" : "active-link"
             }
             onClick={handleNavLinkClick}
           >
-            Partneri
+            {t("Partners")}
           </NavLink>
           <NavLink
-            to="/kontakt"
+            to={`/${t("kontakt")}`}
             className={({ isActive }) =>
               isActive ? "active-link active" : "active-link"
             }
             onClick={handleNavLinkClick}
           >
-            Kontakt
+            {t("Contact")}
           </NavLink>
         </ul>
       </div>
 
       <div className="privacy-content">
-        <p className="privacy" onClick={handlePrivacyClick}>Pravila privatnosti</p>
+        <p className="privacy" onClick={handlePrivacyClick}>
+          {t("Pravila privatnosti")}
+        </p>
         <p className="footer-copyright">
-          © 2024 <span>Podržimo održivo | Web by</span> Dritos{" "}
+          © 2024 <span>{t("Podržimo održivo 2024.")} | Web by</span>{" "}
+          <a
+            href="https://dritos.hr"
+            target={"_blank"}
+            style={{ color: "white" }}
+            rel="noopener noreferrer"
+          >
+            Dritos
+          </a>{" "}
         </p>
       </div>
     </div>
