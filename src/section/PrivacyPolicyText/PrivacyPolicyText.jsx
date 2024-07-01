@@ -14,7 +14,7 @@ export function PrivacyPolicyText() {
           organizacija, promiče, zastupa i usklađuje zajedničke interese svojih
           članica pred državnim i drugim organima u zemlji i inozemstvu.
         </p>
-        <h1 className="privacy-title">
+        <h1 className="privacy-section-title">
           1. Podaci o službeniku za zaštitu podataka
         </h1>
         <p className="privacy-info">
@@ -68,24 +68,20 @@ export function PrivacyPolicyText() {
         </h1>
 
         <ul className="processing-list">
-          <li>izdavanje Eu potvrda</li>
-          <li>raspodjela dozvola za međunarodni prijevoz tereta</li>
-          <li>izdavanje dozvola o podrijetlu robe</li>
-          <li>izdavanje ATA karneta</li>
-          <li>vođenje registra posrednika u prometu nekretnina</li>
-          <li>vođenje imenika agenata posredovanja u prometu nekretnina</li>
           <li>
-            provođenje stručnog ispita za agenta posredovanja u prometu
-            nekretnina
+            zastupanja i usklađivanje interesa članica Hrvatske gospodarske
+            komore
           </li>
+          <li>razvijanje sustava poslovnog informiranja</li>
+          <li>vođenja evidencije registriranih poduzeća</li>
+          <li>obrazovanje i inovacija znanja kadrova u gospodarstvu</li>
+          <li>savjetovanje članica Hrvatske gospodarske komore</li>
           <li>
-            izdavanje potvrda o upisu u upisnik HGK o izdavanju i distribuciji
-            tiska
+            pružanje pomoći prilikom osnivanja novih i transformacije postojećih
+            poduzeća
           </li>
-          <li>
-            usklađivanje voznih redova linijskog prijevoza putnika u cestovnom
-            promet
-          </li>
+          <li>ostvarivanje zahtjeva za pravom na pristup informacijama;</li>
+          <li>zaposlenja u Hrvatskoj gospodarskoj komori</li>
         </ul>
       </div>
 
@@ -107,8 +103,22 @@ export function PrivacyPolicyText() {
           <li>vođenja evidencije dolazaka stranaka</li>
           <li>videonadzora u svrhu zaštite osoba i imovine</li>
         </ul>
+
+        <div className="four-subsection">
+          <h1 className="privacy-section-title">
+            2.4. Vaše osobne podatke obrađujemo temeljem privole u smislu članka
+            6. stavka 1. točke (a) Opće uredbe, u svrhu:
+          </h1>
+
+          <ul className="processing-list">
+            <li>
+              boljeg funkcioniranja svih značajki internetskih stranica i
+              omogućavanja boljeg korisničkog iskustva 
+            </li>
+          </ul>
+        </div>
       </div>
-    
+
       <div className="five-section">
         <h1 className="privacy-section-title">
           3. Obrada osobnih podataka putem videonadzora
@@ -202,6 +212,35 @@ export function PrivacyPolicyText() {
           Google Analytics. Više informacija o njima možete pronaći na sljedećoj
           poveznici: Google Analytics. Neke od mogućnosti koje nam pružaju
           analitički kolačići su:
+        </p>
+
+        <ul className="processing-list">
+          <li>Praćenje broja posjetitelja naših internetskih stranica.</li>
+          <li>
+            Praćenje vremena koje svaki posjetitelj provede na našim
+            internetskih stranicama.
+          </li>
+          <li>
+            Određivanje redoslijeda kojim posjetitelj posjećuje razne
+            internetske stranice Hrvatske gospodarske komore.
+          </li>
+          <li>
+            Procjena dijelova naših internetskih stranica koje treba poboljšati.
+          </li>
+          <li>Optimizacija internetskih stranica.</li>
+          <li>
+            Zahtijevanje povratne informacije za specifične dijelove
+            internetskih stranica.
+          </li>
+        </ul>
+
+        <p className="important-text">Kolačići za (ciljano) oglašavanje</p>
+
+        <p className="privacy-sub-text">
+          Kolačići za (ciljano) oglašavanje su kolačići treće strane i
+          postavljaju se na stranicama Hrvatske gospodarske komore prilikom
+          ugrađivanja video zapisa na internetske stranice. Neke od
+          funkcionalnosti ovakvih kolačića su:
         </p>
 
         <ul className="processing-list">

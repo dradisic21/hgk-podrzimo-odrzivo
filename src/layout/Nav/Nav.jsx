@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import Hamburger from "hamburger-react";
 import { Sidebar } from "../../components/Sidebar/Sidebar";
@@ -10,6 +10,7 @@ import i18n from "../../services/i18n";
 
 export function Nav() {
   const [isOpen, setOpen] = useState(false);
+  const navigate = useNavigate();
   const { t } = useTranslation();
 
   useEffect(() => {
@@ -24,7 +25,9 @@ export function Nav() {
   }, [isOpen]);
 
   const handleSignIn = () => {
-    window.open("https://digitalnakomora.hr/home", "_blank");
+    const language = i18n.language;
+    const url = language === "en" ? "/about-conference" : "/prijava-na-konferenciju";
+    navigate(url);
   };
 
   const closeSidebar = () => {
@@ -36,7 +39,7 @@ export function Nav() {
       <div className={`nav-container ${isOpen ? "mobile-open" : ""}`}>
         <div className="nav-logo">
           <Link to="/">
-            <img src="/assets/logo/nav-logo.svg" alt="logo" />
+            <img src="/assets/logo/nav-logo.png" alt="logo" />
           </Link>
         </div>
         <div className="nav-content">
@@ -79,7 +82,7 @@ export function Nav() {
                 isActive ? "active-link active" : "active-link"
               }
             >
-              {t("Contact")}
+              {t("Contact-nav")}
             </NavLink>
           </ul>
 
@@ -90,7 +93,7 @@ export function Nav() {
           <div className="login-button">
             <Button
               className="login-btn"
-              name={t("Sign in")}
+              name={t("Register")}
               onClick={handleSignIn}
             />
           </div>

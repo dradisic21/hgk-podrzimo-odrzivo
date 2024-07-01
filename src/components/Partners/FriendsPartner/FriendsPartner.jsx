@@ -31,28 +31,57 @@ export function FriendsPartner() {
   }
   
   return (
-    <div className="friends-partners-container">
+    <div className="friends-partners-page-container">
       <div className="title-box">
         <p className="title">{t('Prijatelji')}</p>
       </div>
 
-      <div className="partner-box">
+      <div className="partner-page-box">
         {partners.map((partner) => (
-          <div className="partner-card" key={partner.id}>
-            <div className="content">
-              <div className="image-content">
-                <img
-                  src={`https://hgk.hr/images/full/${partner.picture_path}`}
-                  alt="slika"
-                />
-              </div>
-              <div className="text-content">
-                <p className="partner-name">{partner.title}</p>
-                <div className="text">
-                <div dangerouslySetInnerHTML={{ __html: partner.body }} />
+          <div
+            className={`partner-card ${partner.subtitle ? "has-subtitle" : ""}`}
+            key={partner.id}
+          >
+            {partner.subtitle ? (
+              <a
+                href={partner.subtitle}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="content">
+                  <div className="image-content">
+                    <img
+                      src={`https://hgk.hr/images/full/${partner.picture_path}`}
+                      alt="slika"
+                    />
+                  </div>
+                  <div className="text-content">
+                    <p className="partner-name">{partner.title}</p>
+                    <div className="text">
+                      <div dangerouslySetInnerHTML={{ __html: partner.body }} />
+                    </div>
+                  </div>
+                </div>
+              </a>
+            ) : (
+              <div className="content">
+                <div className="image-content">
+                  <img
+                    src={`https://hgk.hr/images/full/${partner.picture_path}`}
+                    alt="slika"
+                  />
+                </div>
+                <div className="text-content">
+                  <p className="partner-name">{partner.title}</p>
+                  <div className="text">
+                    <div dangerouslySetInnerHTML={{ __html: partner.body }} />
+                  </div>
+                </div>
+                <div className="link-content">
+                  <p className="read-web">Pročitaj više na našem webu...</p>
                 </div>
               </div>
-            </div>
+            )}
           </div>
         ))}
       </div>

@@ -19,15 +19,20 @@ export function Footer() {
   }, []);
 
   const handlePrivacyClick = useCallback(() => {
-    navigate(`/${t("politika-privatnosti")}`);
+    if (i18n.language === "en") {
+      navigate("/privacy-policy");
+    } else if (i18n.language === "hr") {
+      navigate("/politika-privatnosti");
+    }
+
     scrollToTop();
-  }, [navigate, t]);
+  }, [navigate]);
 
   return (
     <div className="footer-container">
       <div className="logos-content">
         <Link to="/" onClick={handleNavLinkClick}>
-          <img src="/assets/logo/nav-logo.svg" alt="logo" />
+          <img src="/assets/logo/nav-logo.png" alt="logo" />
         </Link>
         {i18n.language === "hr" && (
           <img
@@ -90,7 +95,7 @@ export function Footer() {
             }
             onClick={handleNavLinkClick}
           >
-            {t("Contact")}
+            {t("Contact-nav")}
           </NavLink>
         </ul>
       </div>

@@ -11,12 +11,16 @@ import {useTranslation} from "react-i18next";
 
 export default function ContactPage() {
   const navigate = useNavigate();
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
 
 
     const handleGetTicketClick = () => {
-    navigate(`/${t('prijava-na-konferenciju')}`);
-  };
+      if (i18n.language === "en") {
+        navigate("/conference-registration");
+      } else if (i18n.language === "hr") {
+        navigate("/prijava-na-konferenciju");
+      }
+    };
   
   return (
     <div className="contact-page-container">

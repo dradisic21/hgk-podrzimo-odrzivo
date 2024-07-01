@@ -61,10 +61,16 @@ export function Cookies() {
           <div className="cookies-content">
             <h1 className="cookies-title">Kolačići</h1>
             <p className="cookies-text">
-              Quis imperdiet massa tincidunt nunc pulvinar sapien et ligula
-              ullamcorper. Massa vitae tortor condimentum lacinia quis vel.
-              Hendrerit dolor magna eget est lorem ipsum dolor. Mollis aliquam
-              ut porttitor leo a diam sollicitudin tempor id.
+              Za ispravan rad internetskih stranica Hrvatske gospodarske komore,
+              njihovo unaprijeđenije te poboljšanje vašeg iskustva
+              pregledavanja, ove stranice moraju na vaše računalo ili mobilni
+              uređaj spremiti malenu količinu informacija u obliku takozvanih
+              kolačića (engl. cookies).
+            </p>
+            <p className="cookies-text">
+              Kolačići su male tekstualne datoteke koje internetska stranica
+              sprema na vašu terminalnu opremu (računalo ili mobilni uređaj)
+              kada ju posjetite.
             </p>
             <div className="btn-content">
               <Button

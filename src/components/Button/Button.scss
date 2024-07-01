@@ -1,8 +1,8 @@
 @import "../../styles/Colors.scss";
 
 .login-btn {
-  width: 125px;
-  height: 46px;
+  width: auto;
+  padding: 12px 24px;
   background-color: $loginButton;
   color: $whiteColor;
   border: none;
@@ -54,8 +54,8 @@
 }
 
 .ticket-btn {
-  width: 154px;
-  height: 44px;
+  width: auto;
+  padding: 12px 24px;
   background-color: $yellowButton;
   color: $textColor2;
   outline: none;
@@ -63,7 +63,7 @@
   border-radius: 12px;
   font-family: "Clash Display";
   font-size: 16px;
-  line-height: 12px;
+  line-height: 20px;
   font-weight: 600;
   cursor: pointer;
   position: relative;
@@ -95,8 +95,8 @@
 
 
 .read-more {
-  width: 171px;
-  height: 44px;
+  width: auto;
+  padding: 12px 24px;
   background-color: $yellowButton;
   color: $textColor2;
   outline: none;
@@ -136,8 +136,8 @@
 
 
 .details-btn {
-  width: 226px;
-  height: 44px;
+  width: auto;
+  padding: 12px 24px;
   background-color: $yellowButton;
   color: $textColor2;
   outline: none;
@@ -177,8 +177,8 @@
 
 
 .speakers-btn {
-  width: 274px;
-  height: 44px;
+  width: auto;
+  padding: 12px 24px;
   background-color: $yellowButton;
   color: $textColor2;
   outline: none;
@@ -218,8 +218,8 @@
 
 
 .news-btn {
-  width: 212px;
-  height: 44px;
+  width: auto;
+  padding: 12px 24px;
   background-color: $yellowButton;
   color: $textColor2;
   outline: none;
@@ -314,8 +314,8 @@
 }
 
 .speake-read-more {
-  width: 112px;
-  height: 33px;
+  width: auto;
+  padding: 12px 24px;
   background-color: $speakersButton;
   color: $whiteColor;
   outline: none;
@@ -369,6 +369,31 @@
   font-size: 14px;
   font-weight: 400;
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $hoverButton2;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  &:hover:before {
+    transform: scaleX(1);
+  }
+
+  &:hover {
+    color: $whiteColor;
+  }
 }
 
 .gallery-btn{
@@ -395,8 +420,8 @@
 }
 
 .price-button {
-  width: 172px;
-  height: 44px;
+  width: auto;
+  padding: 12px 24px;
   background-color: $yellowButton;
   color: $textColor2;
   outline: none;
@@ -407,13 +432,37 @@
   line-height: 20px;
   font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s, color 0.3s; 
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $hoverButton;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  &:hover:before {
+    transform: scaleX(1);
+  }
 
   &:hover {
-    background-color: $hoverButton;
     color: $whiteColor;
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   }
 }
+
+
 
 .accept-cookies-btn {
   width: 211px;

@@ -9,7 +9,7 @@
   justify-content: center;
   align-items: center;
   z-index: 1;
-
+  
   .video{
     width: 100%;
     object-fit: cover;
@@ -21,6 +21,8 @@
     transform: translate(-50%, -50%);
     color: white;
     text-align: center;
+    background-color: rgba(6, 0, 0, 0.2);
+    padding: 0 20px;
 
     .video-title {
       text-align: center;
@@ -52,6 +54,8 @@
             transform: translate(-50%, -50%);
             color: white;
             text-align: center;
+            width: 100%;
+            max-width: 380px;
         
             .video-title {
               text-align: center;

@@ -51,10 +51,9 @@ export async function getNews() {
 //Single novosti
 
 export async function getSingleNews(slug) {
-  const suffix = getLanguageSuffix();
   try {
     const response = await axios.get(
-      `https://hgk.hr/getSinglePost/${slug}${suffix}`
+      `https://hgk.hr/getSinglePost/${slug}`
     );
 
     return response.data;
@@ -170,7 +169,6 @@ export async function getPrograms() {
 }
 
 //Newsletter 
-
 
 
 export async function sentNewsletter(email) {

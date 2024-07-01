@@ -2,18 +2,27 @@ import React, { useState } from "react";
 import { Button } from "../Button/Button";
 import "./LanguageSwitcher.scss";
 import { useTranslation } from "react-i18next";
+import {useLocation, useNavigate} from "react-router-dom";
 
 export function LanguageSwitcher() {
   const [isOpen, setIsOpen] = useState(false);
   const { i18n } = useTranslation();
+  const navigate = useNavigate();
+  const location = useLocation();
+  const { t } = useTranslation();
+
 
   const toggleDropdown = () => setIsOpen(!isOpen);
 
   const switchLanguage = (language) => {
-    i18n
-      .changeLanguage(language)
-      // .then(() => console.log(`Switching language to: ${i18n.language}`))
-      // .catch((err) => console.error("Language switch failed:", err));
+
+    const currentPath = location.pathname;
+    const currentRoute = currentPath.slice(1); // remove leading slash
+    const newPath = `/${t(currentRoute, { lng: language })}`;
+    navigate(newPath);
+
+    i18n.changeLanguage(language);
+
     setIsOpen(false);
   };
 
@@ -49,5 +58,3 @@ export function LanguageSwitcher() {
     </div>
   );
 }
-
-

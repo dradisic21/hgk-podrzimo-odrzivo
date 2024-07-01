@@ -12,7 +12,11 @@ export function ImageSlider() {
   const images = ["slide1.svg", "slide2.svg", "slide3.svg", "slide4.svg"];
 
   const handleGetTicketClick = () => {
-    navigate("/prijava-na-konferenciju");
+    if (i18n.language === "en") {
+      navigate("/conference-registration");
+    } else if (i18n.language === "hr") {
+      navigate("/prijava-na-konferenciju");
+    }
   };
   
   const items = images.map((image, index) => (

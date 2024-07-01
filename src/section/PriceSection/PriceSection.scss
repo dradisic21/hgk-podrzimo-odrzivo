@@ -7,14 +7,16 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  z-index: 1;
 
-  .balloon-container {
+  .price-balloon-container {
     width: 100%;
     height: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: 0;
 
     .dots-one {
       width: 100%;
@@ -36,6 +38,7 @@
     justify-content: center;
     gap: 32px;
     padding: 100px 10px 40px 10px;
+    position: relative;
     z-index: 1;
 
     .box {
@@ -44,9 +47,10 @@
       border-radius: 24px;
       background: $priceCardBackground;
       position: relative;
+     
 
       &:first-child::before {
-        content: "Most popular";
+        content: attr(data-content);
         position: absolute;
         top: -60px;
         left: 50%;
@@ -70,6 +74,7 @@
         z-index: 999;
 
         .benefits-pre-title {
+          height: 17px;
           font-size: 14px;
           line-height: 17px;
           font-weight: 400;
@@ -140,6 +145,10 @@
             }
           }
         }
+        .price-button-content{
+          position: relative;
+          z-index: 1;
+        }
       }
     }
   }
@@ -147,6 +156,7 @@
 
 @media screen and (max-width: 768px) {
   .price-section-container {
+    z-index: 1;
     .balloon-container {
       .dots-one {
         width: 100%;

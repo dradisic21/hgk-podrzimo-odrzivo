@@ -1,31 +1,15 @@
-export const galleryImage1 =[
-    {
-        id: 1,
-        image: "conference-image.svg",
-    },
-    {
-        id: 2,
-        image: "conference-image1.jpg"
-    }
-]
+export const galleryImage1 = Array.from({ length: 132 }, (_, index) => ({
+    id: index + 1,
+    image: `HGK_PODRZIMO ODRZIVO_-${index + 1}-min.jpg`,
+}));
 
-export const galleryImage2 =[
-    {
-        id: 1,
-        image: "conference-image2.jpg",
-    },
-    {
-        id: 2,
-        image: "conference-image3.jpg"
-    }
-]
-export const galleryImage3 =[
-    {
-        id: 1,
-        image: "conference-image4.jpg",
-    },
-    {
-        id: 2,
-        image: "conference-image5.jpg"
-    }
-]
+export const galleryImage2 = Array.from({ length: 28 }, (_, index) => ({
+    id: index + 1,
+    image: `DSC_${index + 1}-min.jpg`,
+  }));
+
+  
+  export const galleryImage3 = Array.from({ length: 43 }, (_, index) => ({
+    id: index + 1,
+    image: `2023-${index + 1}-min.jpg`,
+  }));

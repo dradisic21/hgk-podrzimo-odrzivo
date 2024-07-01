@@ -3,6 +3,7 @@ import { Button } from "../../components/Button/Button";
 import { ConferencePageTextSection } from "../../section/ConferencePageTextSection/ConferencePageTextSection";
 import { Gallery } from "../../components/Gallery/Gallery";
 import { BannerSection } from "../../section/BannerSection/BannerSection";
+import { MediaAboutUs } from "../../section/MediaAboutUs/MediaAboutUs";
 import { PartnerSection } from "../../section/PartnersSection/PartnerSection";
 import { Newsletter } from "../../section/Newsletter/Newsletter";
 import { Footer } from "../../layout/Footer/Footer";
@@ -11,14 +12,19 @@ import {useTranslation} from "react-i18next";
 
 
 
+
 export default function ConferencePage() {
   const navigate = useNavigate();
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
 
 
     const handleGetTicketClick = () => {
-    navigate(`/${t('prijava-na-konferenciju')}`);
-  };
+      if (i18n.language === "en") {
+        navigate("/conference-registration");
+      } else if (i18n.language === "hr") {
+        navigate("/prijava-na-konferenciju");
+      }
+    };
 
   return (
     <div className="conference-page-container">
@@ -33,8 +39,10 @@ export default function ConferencePage() {
       </div>
 
       <ConferencePageTextSection />
+        <BannerSection />
       <Gallery />
       <BannerSection />
+      <MediaAboutUs />
       <PartnerSection />
       <Newsletter />
       <Footer />

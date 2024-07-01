@@ -9,6 +9,8 @@
   justify-content: center;
   align-items: center;
   z-index: 1;
+  position: relative;
+  padding-bottom: 40px;
 
   .balloon-container {
     width: 100%;
@@ -49,6 +51,37 @@
     gap: 32px;
     z-index: 1;
 
+    .alice-carousel {
+      position: relative;
+  
+      .alice-carousel__prev-btn,
+      .alice-carousel__next-btn {
+        display: none;
+      }
+  
+      .alice-carousel__dots {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+  
+        .alice-carousel__dots-item {
+          width: 8px;
+          height: 8px;
+          border-radius: 10px;
+          background-color: white;
+          margin: 0 5px;
+          transition: all 0.4s ease;
+  
+          &.__active {
+            width: 30px;
+            height: 8px;
+            background-color: #ae529f;
+          }
+        }
+      }
+     
+    }
+
     .news-box {
       width: 100%;
       max-width: 432px;
@@ -58,6 +91,7 @@
       
       a {
         color: $whiteColor;
+        text-decoration: none;
 
         .content {
           padding: 12px;
@@ -96,6 +130,30 @@
               line-height: 22px;
               font-weight: 400;
               word-wrap: break-word;
+
+              h3 {
+                font-size: 28px;
+                line-height: 34px;
+                font-weight: 500;
+                margin-block-start: 0;
+                margin-block-end: 0;
+              }
+              p {
+                font-size: 18px;
+                line-height: 29px;
+                font-weight: 400;
+                margin-block-start: 0;
+                margin-block-end: 0;
+                padding-top: 8px;
+              }
+        
+              ul {
+                li {
+                  list-style: none;
+                  color: $whiteColor;
+                  margin: 5px 0;
+                }
+              }
             }
           }
         }

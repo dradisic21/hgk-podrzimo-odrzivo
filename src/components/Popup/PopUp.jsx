@@ -1,8 +1,12 @@
 import React, { useEffect } from "react";
 import { Button } from "../Button/Button";
+import {useTranslation} from "react-i18next";
+
 import "./PopUp.scss";
 
 export function PopUp({ selectedSpeakerId, speakers, onClose }) {
+  const { t } = useTranslation();
+  
   useEffect(() => {
     document.body.style.overflow = "hidden";
     return () => {
@@ -44,7 +48,7 @@ export function PopUp({ selectedSpeakerId, speakers, onClose }) {
           <div className="popup-action">
             <Button
               type="button"
-              name="Zatvori"
+              name={t("Zatvori")}
               className="popup-close"
               onClick={onClose}
             />

@@ -6,7 +6,8 @@ import { Newsletter } from "../../section/Newsletter/Newsletter";
 import { Footer } from "../../layout/Footer/Footer";
 import { getSingleNews } from "../../services/Api";
 import "./SingleNewsPage.scss";
-import {useTranslation} from "react-i18next";
+import { useTranslation } from "react-i18next";
+import { BannerSection } from "../../section/BannerSection/BannerSection";
 
 export default function SingleNewsPage() {
   const navigate = useNavigate();
@@ -27,7 +28,11 @@ export default function SingleNewsPage() {
   }, [slug, i18n.language]);
 
   const handleGetTicketClick = () => {
-    navigate(`/${t('prijava-na-konferenciju')}`);
+    if (i18n.language === "en") {
+      navigate("/conference-registration");
+    } else if (i18n.language === "hr") {
+      navigate("/prijava-na-konferenciju");
+    }
   };
 
   return (
@@ -50,12 +55,16 @@ export default function SingleNewsPage() {
           </div>
         </div>
       </div>
-  
+
       <div className="single-news-page">
         <div dangerouslySetInnerHTML={{ __html: news.body }} />
       </div>
 
       <Gallery />
+      {(slug === "awards-ceremony-of-the-first-croatian-esg-rating" ||
+        slug === "dodjela-nagrada-prvog-hrvatskog-esg-ratinga") && (
+        <BannerSection />
+      )}
       <Newsletter />
       <Footer />
     </div>

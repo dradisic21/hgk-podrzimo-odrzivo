@@ -13,7 +13,6 @@ export function BecomePartner() {
     async function fetchData() {
       try {
         const response = await getInstPartners();
-        console.log(response);
         setDocuments(response);
       } catch (error) {
         console.log("Dogodila se greška prilikom dohvaćanja podataka:", error);

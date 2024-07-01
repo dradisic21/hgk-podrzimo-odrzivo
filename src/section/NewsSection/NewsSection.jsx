@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import AliceCarousel from "react-alice-carousel";
+import "react-alice-carousel/lib/alice-carousel.css";
 import { getNews } from "../../services/Api";
 import "./NewsSection.scss";
 import { Ballons } from "../../components/Balloons/Balloons";
-import {useTranslation} from "react-i18next";
+import { useTranslation } from "react-i18next";
 
 export function NewsSection() {
   const [newsletter, setNewsletter] = useState([]);
@@ -31,9 +33,10 @@ export function NewsSection() {
     });
   };
 
-  const truncateText = (text, maxLength) => {
-    if (text.length > maxLength) {
-      return text.substring(0, maxLength) + "...";
+  const truncateText = (text, maxWords) => {
+    const words = text.split(" ");
+    if (words.length > maxWords) {
+      return words.slice(0, maxWords).join(" ") + "...";
     }
     return text;
   };
@@ -43,12 +46,26 @@ export function NewsSection() {
       <div className="balloon-container">
         <Ballons />
       </div>
-      
+
       <div className="news-titles-content">
-        <h1 className="news-title">{t("Pročitajte nešto od vijesti i događanja")}</h1>
+        <h1 className="news-title">
+          {t("Pročitajte nešto od vijesti i događanja")}
+        </h1>
       </div>
 
-        <div className="news-content">
+      <div className="news-content">
+        <AliceCarousel
+          autoPlay
+          autoPlayInterval={5000}
+          infinite={true}
+          disableButtonsControls={false} 
+          disableDotsControls={false}
+          responsive={{
+            0: { items: 1 },
+            600: { items: 2 },
+            1024: { items: 3 },
+          }}
+        >
           {newsletter.map((news) => (
             <div className="news-box" key={news.id}>
               <Link to={`/${news.slug}`}>
@@ -61,19 +78,20 @@ export function NewsSection() {
                   </div>
                   <div className="text-content">
                     <p className="head-date">{formatDate(news.created_at)}</p>
-                    <h3 className="box-title">
-                      {truncateText(news.title, 62)}
-                    </h3>
-                    <p className="box-subtitle">
-                      {truncateText(news.meta_description, 94)}
-                    </p>
+                    <h3 className="box-title">{news.title}</h3>
+                    <div
+                      className="box-subtitle"
+                      dangerouslySetInnerHTML={{
+                        __html: truncateText(news.body, 13),
+                      }}
+                    />
                   </div>
                 </div>
               </Link>
             </div>
           ))}
-        </div>
-    
+        </AliceCarousel>
+      </div>
     </div>
   );
 }

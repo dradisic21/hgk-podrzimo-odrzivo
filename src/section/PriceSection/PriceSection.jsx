@@ -16,9 +16,18 @@ export function PriceSection() {
     setBenefitsVisible(false);
   };
 
+  const handleMailto = () => {
+    window.location.href = 'mailto:esg@hgk.hr';
+  };
+
+  const handleRegistrationClick = () => {
+    window.open("https://digitalnakomora.hr/e-ucenje/edukacije/3229", "_blank");
+  };
+  
+
   return (
     <div className="price-section-container">
-      <div className="balloon-container">
+      <div className="price-balloon-container">
         <Ballons />
         <img
           src="/assets/balloons-component/dots.svg"
@@ -28,7 +37,7 @@ export function PriceSection() {
       </div>
       <div className="price-section-content">
         {/* Box 1 */}
-        <div className="box">
+        <div className="box" data-content={t("Most popular")}>
           <div className="box-content">
             <p className="benefits-pre-title">{t("do 14.7.")}</p>
             <h3 className="benefits-title">EARLY BIRD</h3>
@@ -72,7 +81,7 @@ export function PriceSection() {
             </div>
 
             <div className="price-button-content">
-              <Button name={t("Kupi ulaznice")} className="price-button" />
+              <Button name={t("Kupi ulaznice")} className="price-button" onClick={handleRegistrationClick} />
             </div>
           </div>
         </div>
@@ -81,7 +90,7 @@ export function PriceSection() {
         <div className="box">
           <div className="box-content">
             <p className="benefits-pre-title">{t("od 15.7.-15.8.")}</p>
-            <h3 className="benefits-title">{t("CIJENA")} 1</h3>
+            <h3 className="benefits-title">{t("Kotizacija")} 1</h3>
             <p className="benefits-subtitle">
               450 EUR + {t("PDV")}
             </p>
@@ -122,7 +131,7 @@ export function PriceSection() {
             </div>
 
             <div className="price-button-content">
-              <Button name={t("Kupi ulaznice")} className="price-button" />
+              <Button name={t("Kupi ulaznice")} className="price-button" onClick={handleRegistrationClick} />
             </div>
           </div>
         </div>
@@ -131,7 +140,7 @@ export function PriceSection() {
         <div className="box">
           <div className="box-content">
             <p className="benefits-pre-title">{t("od 16.8.")}</p>
-            <h3 className="benefits-title">{t("CIJENA")} 2</h3>
+            <h3 className="benefits-title">{t("Kotizacija")} 2</h3>
             <p className="benefits-subtitle">
               500 EUR + {t("PDV")}
             </p>
@@ -172,7 +181,7 @@ export function PriceSection() {
             </div>
 
             <div className="price-button-content">
-              <Button name={t("Kupi ulaznice")} className="price-button" />
+              <Button name={t("Kupi ulaznice")} className="price-button" onClick={handleRegistrationClick} />
             </div>
           </div>
         </div>
@@ -207,7 +216,7 @@ export function PriceSection() {
                 <p className="benefit-text">{t("simultani prijevod (ENG-HRV)")}</p>
               </div>
               <div>
-                <p className="benefit-text">{t("potvrda o sudjelovanju")}</p>
+                <p className="benefit-text">{t("prijave i slanje potvrde o statusu studenta poslati putem mail-a esg@hgk.hr")}</p>
               </div>
               <div>
                 {benefitsVisible && (
@@ -222,7 +231,7 @@ export function PriceSection() {
             </div>
 
             <div className="price-button-content">
-              <Button name={t("Kupi ulaznice")} className="price-button" />
+              <Button name={t("Pošalji e-maile")} className="price-button" onClick={handleMailto} />
             </div>
           </div>
         </div>

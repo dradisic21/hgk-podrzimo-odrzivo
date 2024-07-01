@@ -17,6 +17,11 @@
         font-weight: 600;
         text-align: center;
     }
+
+    .button-position {
+        display: flex;
+        gap: 30px;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -27,6 +32,13 @@
             font-size: 40px;
             line-height: 48px;
             font-weight: 600;
+        }
+        .button-position {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
         }
     }
 }

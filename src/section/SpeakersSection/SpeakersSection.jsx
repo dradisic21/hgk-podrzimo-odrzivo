@@ -63,7 +63,7 @@ export function SpeakersSection() {
             <div className="speaker-actions">
               <Button
                 type=""
-                name="Pročitaj više"
+                name={t("Pročitaj više")}
                 className="speake-read-more"
                 onClick={() => openPopup(speaker.id)}
               />

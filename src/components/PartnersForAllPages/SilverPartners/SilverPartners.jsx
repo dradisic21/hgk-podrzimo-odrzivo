@@ -58,9 +58,6 @@ export function SilverPartners() {
                   <div className="text-content">
                     <p className="partner-name">{partner.title}</p>
                   </div>
-                  <div className="link-content">
-                    <p className="read-web">Pročitaj više na našem webu...</p>
-                  </div>
                 </div>
               </a>
             ) : (

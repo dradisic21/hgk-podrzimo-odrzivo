@@ -27,7 +27,7 @@
     flex-wrap: wrap;
     gap: 24px;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     margin: 0 auto;
 
     .partner-card {
@@ -39,6 +39,7 @@
       max-width: 354px;
       background-color: $partnerCardBackground;
       border-radius: 8px;
+      padding: 16px 32px;
       opacity: 0.3;
     
       a {
@@ -48,9 +49,11 @@
     
       &.has-subtitle {
         opacity: 1; 
+        transition: transform 300ms ease;
 
         &:hover {
           transform: scale(1.1);
+          transition: transform 500ms ease;
           cursor: pointer;
           background: $hoverCardBackground;
           opacity: 1; 
@@ -85,7 +88,8 @@
           display: flex;
           justify-content: center;
           .partner-name {
-            font-size: 28px;
+            text-align: center;
+            font-size: 24px;
             line-height: 34px;
             font-weight: 500;
             margin-block-start: 0;
@@ -126,6 +130,7 @@
   
     .partner-box {
       .partner-card {
+        padding: 16px 0;
         .content {
           .image-content {
             

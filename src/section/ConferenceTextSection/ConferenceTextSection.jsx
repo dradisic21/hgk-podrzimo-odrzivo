@@ -22,9 +22,9 @@ export function ConferenceTextSection() {
           </h2>
             {i18n.language === 'hr' &&
             <div>
-                <p className="super-text-subtitle">Za tvrtke koje plaćaju članarinu HGK, vrijednost kotizacija bilježi se kao konzumirana usluga iz plaćene članarine po sudioniku (prijava putem <a href='https://digitalnakomora.hr/e-ucenje/edukacije/1599' target="_blank" rel="noreferrer">Digitalne komore</a>).</p>
+                <p className="super-text-subtitle">Za poduzeća koje plaćaju članarinu HGK, vrijednost kotizacija bilježi se kao konzumirana usluga iz plaćene članarine po sudioniku (prijava putem <a href='https://digitalnakomora.hr/e-ucenje/edukacije/1599' target="_blank" rel="noreferrer">Digitalne komore</a>).</p>
                 <p className="super-text-subtitle">Za nečlanove, udruge, institucije i članove koji ne plaćaju članarinu HGK, kotizacije se plaćaju po sudioniku sukladno roku prijave i uplate (prijava putem Digitalne komore).</p>
-                <p className="super-text-subtitle">Za nečlanove, udruge i članove koji ne plaćaju članarinu HGK, ali bi se odlučili na dobrovoljno plaćanje članstva, kotizacija se bilježi kao za tvrtke koje plaćaju članarinu HGK. Više informacija o dobrovoljnom članstvu možete pronaći <a href='https://www.hgk.hr/clanstvo-u-hgk' target="_blank" rel="noreferrer">OVDJE</a>.</p>
+                <p className="super-text-subtitle">Za nečlanove, udruge i članove koji ne plaćaju članarinu HGK, ali bi se odlučili na dobrovoljno plaćanje članstva, kotizacija se bilježi kao za poduzeća koje plaćaju članarinu HGK. Više informacija o dobrovoljnom članstvu možete pronaći <a href='https://www.hgk.hr/clanstvo-u-hgk' target="_blank" rel="noreferrer">OVDJE</a>.</p>
                 <p className="super-text-subtitle">Za studente vrijedi povlaštena fiksna cijena kotizacije 62,50 € (sa uključenim PDV-om) do 15. 8. 2024. (prijave i slanje potvrde o statusu studenta poslati putem mail-a <a href='mailto:esg@hgk.hr'>esg@hgk.hr</a>).</p>
                 <p className="super-text-subtitle">U slučaju specifičnih upita molimo kontaktirajte nas putem e-pošte na <a href='mailto:esg@hgk.hr'>esg@hgk.hr</a> ili telefonski na <a href='tel:+385 1 460 6705'>+385 1 460 6705</a>.</p>
             </div>

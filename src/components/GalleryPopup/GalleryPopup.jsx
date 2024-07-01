@@ -28,6 +28,8 @@ export function GalleryPopup({ onClose, gallery }) {
               infinite={true}
               disableButtonsControls={false}
               disableDotsControls={false}
+              autoHeight={false}
+              items={gallery.length}
             >
               {gallery.map((image, index) => (
                 <img

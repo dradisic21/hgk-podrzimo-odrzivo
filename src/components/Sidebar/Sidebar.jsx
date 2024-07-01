@@ -24,7 +24,7 @@ export function Sidebar({ closeSidebar }) {
       <div className="mobile-nav-container">
         <div className="mobile-logo">
         <Link to="/" onClick={closeSidebar}>
-          <img src="/assets/logo/mobile-nav_logo.svg" alt="" />
+          <img src="/assets/logo/mobile-nav_logo.png" alt="" />
         </Link>
         </div>
         <div className="mobile-nav-content">
@@ -42,7 +42,7 @@ export function Sidebar({ closeSidebar }) {
               <p className="text">{t("Partners")}</p>
             </Link>
             <Link to="/kontakt" onClick={closeSidebar}>
-              <p className="text">{t("Contact")}</p>
+              <p className="text">{t("Contact-nav")}</p>
             </Link>
           </ul>
          <div className="nav-actions">

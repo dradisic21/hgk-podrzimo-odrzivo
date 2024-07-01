@@ -48,7 +48,7 @@ export function Gallery() {
             onClick={() => openPopup(galleryImage1)}
           >
             <img
-              src={`/assets/conference/${galleryImage1[0].image}`}
+              src={`/assets/conference/${galleryImage1[1].image}`}
               alt="Gallery 1"
               className="gallery-image"
             />
@@ -61,7 +61,7 @@ export function Gallery() {
               </Button>
             </div>
             <div className="gallery-text">
-              <p className="gallery-title">Prošla konferencija 2023.</p>
+              <p className="gallery-title">{t("Prošla konferencija 2021.")}</p>
             </div>
           </div>
           <div
@@ -69,7 +69,7 @@ export function Gallery() {
             onClick={() => openPopup(galleryImage2)}
           >
             <img
-              src={`/assets/conference/${galleryImage2[0].image}`}
+              src={`/assets/conference/${galleryImage2[18].image}`}
               alt="Gallery 2"
               className="gallery-image"
             />
@@ -82,7 +82,7 @@ export function Gallery() {
               </Button>
             </div>
             <div className="gallery-text">
-              <p className="gallery-title">Prošla konferencija 2023.</p>
+              <p className="gallery-title">{t("Prošla konferencija 2022.")}</p>
             </div>
           </div>
           <div
@@ -90,7 +90,7 @@ export function Gallery() {
             onClick={() => openPopup(galleryImage3)}
           >
             <img
-              src={`/assets/conference/${galleryImage3[0].image}`}
+              src={`/assets/conference/${galleryImage3[5].image}`}
               alt="Gallery 3"
               className="gallery-image"
             />
@@ -103,7 +103,7 @@ export function Gallery() {
               </Button>
             </div>
             <div className="gallery-text">
-              <p className="gallery-title">Prošla konferencija 2023.</p>
+              <p className="gallery-title">{t("Prošla konferencija 2023.")}</p>
             </div>
           </div>
         </div>

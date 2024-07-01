@@ -1,9 +1,10 @@
 @import "../../../styles/Colors.scss";
 
-.institutional-partners-container {
+.institutional-partners-page-container {
   width: 100%;
   max-width: 1920px;
-  margin: 0 10px;
+  position: relative;
+  z-index: 1;
 
   .title-box {
     width: 100%;
@@ -24,7 +25,7 @@
     }
   }
 
-  .partner-box {
+  .partner-page-box {
     padding-top: 24px;
     display: flex;
     flex-wrap: wrap;
@@ -36,12 +37,39 @@
     .partner-card {
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
+      align-items: center;
       justify-content: center;
       width: 100%;
       max-width: 354px;
       background-color: $partnerCardBackground;
       border-radius: 8px;
+      opacity: 0.3;
+    
+      a {
+        text-decoration: none;
+        color: $whiteColor;
+      }
+    
+      &.has-subtitle {
+        opacity: 1; 
+        transition: transform 300ms ease;
+
+        &:hover {
+          transform: scale(1.05);
+          transition: transform 500ms ease;
+          cursor: pointer;
+          background: $hoverCardBackground;
+          opacity: 1; 
+          
+          .link-content {
+            
+            .read-web {
+              color: $textColor7;
+              border-bottom: 1px solid $textColor7;
+            }
+          }
+        }
+      }
       
       .content {
         height: 100%;
@@ -94,10 +122,49 @@
   
             ul {
               li {
-                list-style: none;
                 color: $whiteColor;
                 margin: 5px 0;
               }
+            }
+          }
+        }
+        .link-content {
+          display: flex;
+          justify-content: flex-start;
+          width: 100%;
+    
+          .read-web {
+            color: $textColor3;
+            border-bottom: 1px solid $textColor3;
+          }
+        }
+      }
+      
+    }
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .institutional-partners-page-container {
+    .title-box {
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+
+      .title {
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 39px;
+      }
+    }
+
+    .partner-page-box {
+      .partner-card {
+        .content {
+          .text-content {
+            .partner-name {
+              font-size: 24px;
+              line-height: 28px;
             }
           }
         }
@@ -106,9 +173,13 @@
   }
 }
 
-@media screen and (max-width: 768px) {
-  .institutional-partners-container {
+@media screen and (max-width: 500px) {
+  .institutional-partners-page-container {
     .title-box {
+      width: 100%;
+      max-width: 380px;
+      margin: 0 auto;
+
       .title {
         font-size: 32px;
         font-weight: 600;
@@ -116,15 +187,9 @@
       }
     }
 
-    .partner-box {
+    .partner-page-box {
       .partner-card {
         .content {
-          .image-content {
-            img {
-              width: 46px;
-              height: 30px;
-            }
-          }
           .text-content {
             .partner-name {
               font-size: 24px;

@@ -11,9 +11,7 @@ export function HomeSpeakersSection() {
   const navigate = useNavigate();
     const { t, i18n } = useTranslation();
 
-    const handleClick = () => {
-    navigate("/govornici");
-  };
+ 
 
   useEffect(() => {
     async function fetchData() {
@@ -28,6 +26,14 @@ export function HomeSpeakersSection() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [i18n.language]);
 
+  const handleClick = () => {
+    if (i18n.language === "en") {
+      navigate("/speakers");
+    } else if (i18n.language === "hr") {
+      navigate("/govornici");
+    }
+  };
+
   return (
     <div className="home-speaker_container">
       <div className="balloon-container">
@@ -40,17 +46,11 @@ export function HomeSpeakersSection() {
         </p>
       </div>
 
-      <div className="speakers-content">
+      <div className="home-speakers-content">
         {speakers.map((speaker, index) => (
           <div className="speaker-card" key={index}>
             <div className="content">
-              <div className="logo-image">
-                <img src="/assets/logo/speaker-logo.svg" alt="logo" />
-              </div>
-              <div className="text">
-                <div dangerouslySetInnerHTML={{ __html: speaker.body }}></div>
-              </div>
-              <div className="profile-main">
+            <div className="profile-main">
                 <img
                   src={`https://hgk.hr/images/full/${speaker.picture_path}`}
                   alt="profile-pic"
@@ -61,6 +61,10 @@ export function HomeSpeakersSection() {
                   <p className="speaker-description">{speaker.subtitle}</p>
                 </div>
               </div>
+              <div className="text">
+                <div dangerouslySetInnerHTML={{ __html: speaker.body }}></div>
+              </div>
+              
             </div>
           </div>
         ))}
